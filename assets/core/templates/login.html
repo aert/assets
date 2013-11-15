@@ -1,0 +1,61 @@
+{% extends "_base.html" %}
+{% load i18n %}
+
+{% block body_attrs %} class="login" {% endblock %}
+
+{% block title %}
+Login {{ block.super }}
+{% endblock %}
+
+{% block content %}
+
+<div class="z_center">
+    <form action="{% url 'set_language' %}" method="post">
+        {% csrf_token %}
+        <input name="next" type="hidden" value="{{ redirect_to }}" />
+        <select name="language" onchange="this.form.submit()">
+            {% get_language_info_list for LANGUAGES as languages %}
+            {% for language in languages %}
+            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+            {{ language.name_local }} ({{ language.code }})
+            </option>
+            {% endfor %}
+        </select>
+        <noscript><input type="submit" value="Go" /></noscript>
+    </form>
+</div>
+
+<div class="ui stacked segment" id="main_segment">
+    <h3 class="ui dividing header">
+        {% trans "Assets Management" %}
+    </h3>
+
+    <div class="ui form raised segment">
+        <div class="field">
+            <label>Username</label>
+            <div class="ui left labeled icon input">
+                <input placeholder="Username" type="text">
+                <i class="user icon"></i>
+                <div class="ui corner label">
+                    <i class="icon asterisk"></i>
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <label>Password</label>
+            <div class="ui left labeled icon input">
+                <input type="password">
+                <i class="lock icon"></i>
+                <div class="ui corner label">
+                    <i class="icon asterisk"></i>
+                </div>
+            </div>
+        </div>
+        <div class="ui error message">
+            <div class="header">We noticed some issues</div>
+        </div>
+        <a class="ui blue submit button" href="{% url 'home' %}">{% trans "Login" %}</a>
+    </div>
+</div>
+
+{% endblock %}

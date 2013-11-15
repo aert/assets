@@ -1,0 +1,58 @@
+---
+
+# Install requirements
+- name: app_assets-apt
+  apt: pkg=$item state=installed
+  with_items:
+    - python-virtualenv
+    - python-pip
+    - supervisor
+
+# Stop Supervisor
+- name: app-stop-supervisor
+  shell: supervisorctl stop assets
+
+# Create Dirs
+- name: app-dirs
+  file: path=$item state=directory owner=www-data group=www-data
+  with_items:
+    - "$prefix"
+    - "$tmp_path"
+
+# Upload & Install Installer
+- name: app-installer-upload
+  copy: src=$installer_tgz dest=${tmp_path} owner=www-data group=www-data
+
+- name: app-installer-untar
+  shell: cd ${tmp_path} && tar zxf {{installer_tgz|basename}}
+
+- name: app-installer-install
+  shell: cd ${tmp_path}/{{installer_dirname}} && make install PREFIX={{ prefix }}
+
+- name: app-installer-clean
+  file: path=${tmp_path}/{{installer_dirname}} state=absent
+
+# Config Dirs 
+- name: app-dirs-app
+  file: path=$item state=directory owner=www-data group=www-data  recurse=yes
+  with_items:
+    - "$app_env"
+    - "$app_assets"
+    - "$app_uploads"
+    - "$app_log"
+
+# Migrate db
+
+#TODO
+
+# Configure App
+- name: app-config-file
+  template: src=config_vagrant.ini.j2 dest=$app_home/config.ini owner=www-data group=www-data
+
+# Configure gunicorn
+- name: app-gunicorn
+  template: src=start_gunicorn.sh.j2 dest=$app_home/start_gunicorn.sh mode=0751 owner=www-data group=www-data
+
+- name: app-perms
+  shell: chown -R www-data:www-data ${app_home}
+

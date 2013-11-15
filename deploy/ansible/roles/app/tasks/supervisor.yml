@@ -1,0 +1,19 @@
+---
+
+# Install requirements
+- name: supervisor-apt
+  apt: pkg=$item state=installed
+  with_items:
+    - supervisor
+
+# Start Supervisor
+- name: supervisor-start
+  shell: supervisorctl start assets
+
+# Configure supervisor
+- name: supervisor-file
+  template: src=supervisor.conf.j2 dest=/etc/supervisor/conf.d/assets.conf
+  notify:
+    - restart supervisor
+    - restart nginx
+

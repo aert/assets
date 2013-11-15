@@ -1,0 +1,14 @@
+{% extends "_base.html" %}
+{% load i18n %}
+
+{% block title %}
+{% trans "Students" %} {{ block.super }}
+{% endblock %}
+
+{% block content %}
+<div class="ui stacked feed segment">
+    <h3 class="ui dividing header">
+        {% trans "Students" %}
+    </h3>
+</div>
+{% endblock %}

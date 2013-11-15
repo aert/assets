@@ -1,0 +1,21 @@
+{% load i18n %}
+{% load assets_tags %}
+
+<!--ACCOUNT ACTIONS-->
+<div class="ui dropdown item">
+    <i class="user icon"></i><i class="icon dropdown"></i>
+    <div class="menu">
+        <a class="item" href="{% url "account-detail" 1 %}"><i class="setting icon"></i>{% trans "My Account" %}</a>
+        <!--<a class="item"><i class="settings icon"></i>Administration</a>-->
+        <a class="item" href="{% url "admin:index" %}"><i class="settings icon"></i>{% trans "Administration" %}</a>
+
+        <form action="{% url 'set_language' %}" method="post">
+            {% csrf_token %}
+            <input name="next" type="hidden" value="{{ redirect_to }}" />
+            <input name="language" type="hidden" value="{% next_lang %}"/>
+            <a class="item" href="#" onclick="$(this).closest('form').submit()"><i class="checkered flag icon"></i>{% trans "Language" %} : {% next_lang %}</a>
+        </form>
+        <a class="item" href="{% url "account-logout" %}"><i class="sign out icon"></i>{% trans "Logout" %}</a>
+    </div>
+</div>
+

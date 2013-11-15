@@ -1,0 +1,55 @@
+
+html,
+body {
+    font-size: 15px;
+    padding: 20px;
+    height: 100%;
+}
+body {
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    background: #FCFCFC url(../images/bg.png) repeat;
+    /*background-color: #F3F0EB;*/
+    margin: 0px;
+    padding: 0px;
+    color: #555555;
+    /*min-width: 320px;
+    min-width: 380px;*/
+}
+
+a {
+    text-decoration: none;
+}
+
+body.login #main_segment {
+    max-width: 400px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.z_center {
+    text-align: center;
+}
+
+.z_header_actions {
+    float: right;
+}
+
+
+/* TO BE REMOVED */
+
+#s {
+    width: 30px;
+    -webkit-transition-duration: 400ms;
+    -webkit-transition-property: width;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-duration: 400ms;
+    -moz-transition-property: width;
+    -moz-transition-timing-function: ease;
+    -o-transition-duration: 400ms;
+    -o-transition-property: width;
+    -o-transition-timing-function: ease;
+}
+
+#s:focus {
+    width: 200px;
+}

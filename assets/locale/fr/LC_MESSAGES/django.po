@@ -1,0 +1,59 @@
+# French Translations.
+# Copyright (C) 2013
+# This file is distributed under the same license as the Assets package.
+# AERT <dev.aert@gmail.com>, 2013.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-11-15 18:18+0000\n"
+"PO-Revision-Date: 2013-11-15 16:05+01\n"
+"Last-Translator: AERT <dev.aert@gmail.com>\n"
+"Language-Team: French <dev.aert@gmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: core/templates/accounts_detail.html:5
+#: core/templates/accounts_detail.html:12
+#: core/templates/includes/menu_top_account.html:8
+msgid "My Account"
+msgstr "Mon compte"
+
+#: core/templates/login.html:30
+msgid "Assets Management"
+msgstr "Gestion des Ressources"
+
+#: core/templates/login.html:57
+msgid "Login"
+msgstr "Connexion"
+
+#: core/templates/students.html:5 core/templates/students.html.py:11
+#: core/templates/includes/menu_top.html:9
+msgid "Students"
+msgstr "Élèves"
+
+#: core/templates/treasury.html:5 core/templates/treasury.html.py:11
+#: core/templates/includes/menu_top.html:12
+msgid "Treasury"
+msgstr "Trésorie"
+
+#: core/templates/includes/menu_top.html:18
+msgid "Search..."
+msgstr "Rechercher..."
+
+#: core/templates/includes/menu_top_account.html:10
+msgid "Administration"
+msgstr "Administration"
+
+#: core/templates/includes/menu_top_account.html:16
+msgid "Language"
+msgstr "Langue"
+
+#: core/templates/includes/menu_top_account.html:18
+msgid "Logout"
+msgstr "Se déconnecter"
