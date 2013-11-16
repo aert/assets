@@ -91,6 +91,7 @@ LOCALE_PATHS = (join(BASE_DIR, 'locale'),)
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
+STATIC_ROOT = join(PUBLIC_ROOT, 'assets')
 STATIC_URL = '/static/'
 
 #####

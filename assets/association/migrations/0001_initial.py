@@ -14,9 +14,15 @@ class Migration(SchemaMigration):
             ('name', self.gf('django.db.models.fields.CharField')(max_length=100)),
             ('surname', self.gf('django.db.models.fields.CharField')(max_length=100)),
             ('adress', self.gf('django.db.models.fields.TextField')(blank=True)),
-            ('classroom', self.gf('django.db.models.fields.CharField')(max_length=50)),
-            ('level', self.gf('django.db.models.fields.IntegerField')()),
-            ('is_deleted', self.gf('django.db.models.fields.BooleanField')(default=False)),
+            ('classroom', self.gf('django.db.models.fields.CharField')(max_length=50, blank=True)),
+            ('level', self.gf('django.db.models.fields.IntegerField')(blank=True)),
+            ('phone', self.gf('django.db.models.fields.CharField')(max_length=60, blank=True)),
+            ('parent', self.gf('django.db.models.fields.CharField')(max_length=200, blank=True)),
+            ('email', self.gf('django.db.models.fields.EmailField')(max_length=75, blank=True)),
+            ('is_active', self.gf('django.db.models.fields.BooleanField')(default=True)),
+            ('last_registration', self.gf('django.db.models.fields.DateField')(default=datetime.datetime.now, null=True, blank=True)),
+            ('added', self.gf('django.db.models.fields.DateTimeField')(auto_now_add=True, blank=True)),
+            ('updated', self.gf('django.db.models.fields.DateTimeField')(auto_now=True, blank=True)),
         ))
         db.send_create_signal(u'association', ['Student'])
 
@@ -41,13 +47,19 @@ class Migration(SchemaMigration):
     models = {
         u'association.student': {
             'Meta': {'object_name': 'Student'},
+            'added': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'blank': 'True'}),
             'adress': ('django.db.models.fields.TextField', [], {'blank': 'True'}),
-            'classroom': ('django.db.models.fields.CharField', [], {'max_length': '50'}),
+            'classroom': ('django.db.models.fields.CharField', [], {'max_length': '50', 'blank': 'True'}),
+            'email': ('django.db.models.fields.EmailField', [], {'max_length': '75', 'blank': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'is_deleted': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
-            'level': ('django.db.models.fields.IntegerField', [], {}),
+            'is_active': ('django.db.models.fields.BooleanField', [], {'default': 'True'}),
+            'last_registration': ('django.db.models.fields.DateField', [], {'default': 'datetime.datetime.now', 'null': 'True', 'blank': 'True'}),
+            'level': ('django.db.models.fields.IntegerField', [], {'blank': 'True'}),
             'name': ('django.db.models.fields.CharField', [], {'max_length': '100'}),
-            'surname': ('django.db.models.fields.CharField', [], {'max_length': '100'})
+            'parent': ('django.db.models.fields.CharField', [], {'max_length': '200', 'blank': 'True'}),
+            'phone': ('django.db.models.fields.CharField', [], {'max_length': '60', 'blank': 'True'}),
+            'surname': ('django.db.models.fields.CharField', [], {'max_length': '100'}),
+            'updated': ('django.db.models.fields.DateTimeField', [], {'auto_now': 'True', 'blank': 'True'})
         },
         u'association.treasury': {
             'Meta': {'object_name': 'Treasury'},

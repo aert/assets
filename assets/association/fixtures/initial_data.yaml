@@ -1,0 +1,437 @@
+- fields:
+    name: HADDOU
+    surname: Sabrina
+    adress: "6, rue Migneret 67000 Strasbourg\r\n"
+    classroom: '1'
+    level: 0
+    phone: (0)647228197
+    parent: Bouziane
+    email: ''
+    is_active: true
+    last_registration: 2013-11-16
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 1
+- fields:
+    name: HADDOU
+    surname: Bouchra
+    adress: "6, rue Migneret 67000 Strasbourg"
+    classroom: "1"
+    level: 0 
+    phone: (0)647228197
+    parent: Bouziane
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 2
+- fields:
+    name: MANKOUR
+    surname: Ademe
+    adress: "7, rue Lauth 67000 Strasbourg"
+    classroom: "1"
+    level: 0 
+    phone: (0)651560443
+    parent: Mankour
+    email: "13(1)"
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 3
+- fields:
+    name: KHELADI
+    surname: Khadija
+    adress: "22, route de l'île des épis 67000 Strasbourg"
+    classroom: "1"
+    level: 0 
+    phone: (0)683398661
+    parent: Abdesselam
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 4
+- fields:
+    name: SALEM
+    surname: Fares
+    adress: "3, cour bratz 67000 Strasbourg"
+    classroom: "1"
+    level: 0 
+    phone: (0)658202904
+    parent: Ihab
+    email: "14(1)"
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 5
+- fields:
+    name: ZIDANE
+    surname: Omar
+    adress: "11, rue gerstheim 67100 Strasbourg "
+    classroom: "1"
+    level: 0 
+    phone: (0)611251014
+    parent: Zidane Kamal
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 6
+- fields:
+    name: ZIDANE
+    surname: Sarah
+    adress: "11, rue gerstheim 67100 Strasbourg "
+    classroom: "1"
+    level: 0 
+    phone: (0)611251014
+    parent: Zidane Kamal
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 7
+- fields:
+    name: ZIDANE
+    surname: Youssef
+    adress: "11, rue gerstheim 67100 Strasbourg "
+    classroom: "1"
+    level: 0 
+    phone: (0)611251014
+    parent: Zidane Kamal
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 8
+- fields:
+    name: ELKADDOURI
+    surname: Louiza
+    adress: "13, rue Migneret 67000 Strasbourg"
+    classroom: "1"
+    level: 0 
+    phone: (0)629098272
+    parent: mme Elkaddouri
+    email: "1(1)"
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 9
+- fields:
+    name: KAMARA
+    surname: Brahim
+    adress: " route de l'île des épis 67000 Strasbourg"
+    classroom: "1"
+    level: 0 
+    phone: (0)650770054
+    parent: Brahim
+    email: "2(2)"
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 10
+- fields:
+    name: KAMARA
+    surname: Issa
+    adress: " route de l'île des épis 67000 Strasbourg"
+    classroom: "1"
+    level: 0 
+    phone: (0)650770054
+    parent: Brahim
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 11
+- fields:
+    name: KABYLE
+    surname: Nour
+    adress: "16, rue freland 67100 Strasbourg"
+    classroom: "1"
+    level: 0 
+    phone: "(0)678457424, (0)659889480"
+    parent: Kabyle
+    email: "3(1)"
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 12
+- fields:
+    name: ALAOUA
+    surname: yacine
+    adress: "5, rue Migneret 67000 Strasbourg"
+    classroom: "1"
+    level: 0 
+    phone: ''
+    parent: Allaoua Mudith
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 13
+- fields:
+    name: ELMENOUBI
+    surname: Anissa
+    adress: ""
+    classroom: "1"
+    level: 0 
+    phone: ''
+    parent: ''
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 14
+- fields:
+    name: SMIEL           
+    surname: Cheima  
+    adress: "42, rue Watweller 67000 Strasbourg"
+    classroom: "2"
+    level: 1
+    phone: (0)611251014
+    parent: ''
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 15
+- fields:
+    name: TIRS
+    surname: Oualid
+    adress: "6, rue Migneret 67000 Strasbourg"
+    classroom: "2"
+    level: 1
+    phone: (0)647228197
+    parent: ''
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 16
+- fields:
+    name: BOUMEDIE N
+    surname: Yacine
+    adress: "33, rue Ampère 67100 Strasbourg"
+    classroom: "2"
+    level: 1
+    phone: (0)624833028
+    parent: Djelloul
+    email: "4(1)"
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 17
+- fields:
+    name: BOUMEDIEN
+    surname: Sarah
+    adress: "6, rue de lieje 67000 Strasbourg"
+    classroom: "2"
+    level: 1
+    phone: (0)751507517
+    parent: Mohamed
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 18
+- fields:
+    name: MESSAFAH
+    surname: Assia
+    adress: "14, rue de wattwiller 67000 Strasbourg"
+    classroom: "2"
+    level: 1
+    phone: (0)388347926
+    parent:  ''
+    email: "5(1)"
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 19
+- fields:
+    name: BOUAICHA
+    surname: Hind
+    adress: "22, route de l'île des épis 67000 Strasbourg"
+    classroom: "2"
+    level: 1
+    phone: (0)953229713
+    parent: Fatima Boaicha
+    email: "6(3)"
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 20
+- fields:
+    name: BOUAICHA
+    surname: Soraya
+    adress: "22, route de l'île des épis 67000 Strasbourg"
+    classroom: "2"
+    level: 1
+    phone: (0)953229713
+    parent: Fatima Boaicha
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 21
+- fields:
+    name: BOUAICHA
+    surname: Hamza
+    adress: "22, route de l'île des épis 67000 Strasbourg"
+    classroom: "2"
+    level: 1
+    phone: (0)953229713
+    parent: Fatima Boaicha
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 22
+- fields:
+    name: KHALADI
+    surname: Bahaeddine
+    adress: "22, route de l'île des épis 67000 Strasbourg"
+    classroom: "2"
+    level: 1
+    phone: (0)683398661
+    parent: Abdesselam
+    email: "7(2)"
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 23
+- fields:
+    name: BENHACENE
+    surname: Zohra
+    adress: "1, rue luan ,,,"
+    classroom: "2"
+    level: 1
+    phone: (0)980897483
+    parent: Kemchissi
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 24
+- fields:
+    name: SEBOUAÏ
+    surname: Widad
+    adress: "1, rue Migneret 67000 Strasbourg"
+    classroom: "2"
+    level: 1
+    phone: (0)642450654
+    parent: Aboubakr
+    email: "8(1)"
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 25
+- fields:
+    name: DRIDI
+    surname: Salma
+    adress: "37, rue Vauban 67000Strasbourg"
+    classroom: "2"
+    level: 1
+    phone: (0)388450524
+    parent: Olfadridi
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 26
+- fields:
+    name: MOULAI-ARBI
+    surname: morseli
+    adress: "29, rue ampère 67100 Strasbourg"
+    classroom: "2"
+    level: 1
+    phone: "(0)670253306, (0)673163572"
+    parent: '' 
+    email: "9(1)"
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 27
+- fields:
+    name: AMAKRANE
+    surname: Youssef  
+    adress: "71, route du Rhin 67000 Strasbourg"
+    classroom: "2"
+    level: 1
+    phone: (0)369314540
+    parent: Tami
+    email: "10(1)"
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 28
+- fields:
+    name: REMOUCHE
+    surname: Waîl
+    adress: "82, Av ean Jaures 67100 Strasbourg"
+    classroom: "2"
+    level: 1
+    phone: (0)388600656
+    parent: Mustapha
+    email: "11(2)"
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 29
+- fields:
+    name: REMOUCHE
+    surname: Yanis
+    adress: "82, Av ean Jaures 67100 Strasbourg"
+    classroom: "2"
+    level: 1
+    phone: "(0)388600656, 0609155097"
+    parent: Mustapha
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 30
+- fields:
+    name: AMMOUR 
+    surname: Aicha
+    adress: "1, rue de Soultz 67000 Strasbourg"
+    classroom: "2"
+    level: 1
+    phone: (0)673401760
+    parent: Moustapha
+    email: "12(2)"
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 31
+- fields:
+    name: AMMOUR 
+    surname: Fouzi
+    adress: "1, rue de Soultz 67000 Strasbourg"
+    classroom: "2"
+    level: 1
+    phone: (0)673401760
+    parent: Moustapha
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 32
+- fields:
+    name: JAWAD
+    surname: Jannat
+    adress: "10, rue coulaux 67000 Strasbourg"
+    classroom: "2"
+    level: 1
+    phone: (0)620796220
+    parent: Jawad
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 33
+- fields:
+    name: JAWAD
+    surname: Rayan
+    adress: "10, rue coulaux 67000 Strasbourg"
+    classroom: "2"
+    level: 1
+    phone: (0)620796220
+    parent: Jawad
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 34
+- fields:
+    name: '---' 
+    surname: Imad
+    adress: '' 
+    classroom: "2"
+    level: 1
+    phone: '' 
+    parent: '' 
+    added: 2013-11-16 21:11:00.000000+00:00
+    updated: 2013-11-16 21:11:00.000000+00:00
+  model: association.student
+  pk: 35
