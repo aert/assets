@@ -17,7 +17,7 @@ class Student(models.Model):
     name = models.CharField(_('name'), max_length=100)
     surname = models.CharField(_('surname'), max_length=100)
     adress = models.TextField(_('address'), blank=True)
-    classroom = models.CharField(_('classroom'), blank=True, max_length=50)
+    classroom = models.CharField(_('class'), blank=True, max_length=50)
     level = models.IntegerField(_('level'), choices=CHOICES_LEVEL, blank=True)
     phone = models.CharField(_('phone'), blank=True, max_length=60)
     parent = models.CharField(_('parent'), blank=True, max_length=200)
@@ -33,6 +33,7 @@ class Student(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     class Meta:
+        ordering = ['name', 'surname']
         verbose_name = _('student')
         verbose_name_plural = _('students')
 

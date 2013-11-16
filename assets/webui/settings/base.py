@@ -102,6 +102,7 @@ TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
 
 SUIT_CONFIG = {
     'ADMIN_NAME': _('Association'),
+    'SEARCH_URL': '/admin/association/student',
     'MENU': (
         # Keep original label and models
         'sites',

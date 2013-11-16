@@ -22,9 +22,8 @@ class StudentAdmin(ModelAdmin):
         'last_registration'
     )
     list_display = (
-        'name', 'surname', 'adress',
-        'classroom', 'level', 'phone',
-        'parent', 'email', 'is_active'
+        'name', 'surname', 'adress', 'classroom', 'level', 'phone',
+        'parent', 'email', 'last_registration', 'is_active'
     )
     list_filter = ('level', 'classroom')
     date_hierarchy = 'last_registration'

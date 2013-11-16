@@ -21,6 +21,7 @@
     level: 0 
     phone: (0)647228197
     parent: Bouziane
+    last_registration: 2013-11-15
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -34,6 +35,7 @@
     phone: (0)651560443
     parent: Mankour
     email: "13(1)"
+    last_registration: 2013-11-14
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -46,6 +48,7 @@
     level: 0 
     phone: (0)683398661
     parent: Abdesselam
+    last_registration: 2013-11-13
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -59,6 +62,7 @@
     phone: (0)658202904
     parent: Ihab
     email: "14(1)"
+    last_registration: 2013-11-12
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -71,6 +75,7 @@
     level: 0 
     phone: (0)611251014
     parent: Zidane Kamal
+    last_registration: 2013-11-11
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -83,6 +88,7 @@
     level: 0 
     phone: (0)611251014
     parent: Zidane Kamal
+    last_registration: 2013-11-10
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -95,6 +101,7 @@
     level: 0 
     phone: (0)611251014
     parent: Zidane Kamal
+    last_registration: 2013-11-09
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -108,6 +115,7 @@
     phone: (0)629098272
     parent: mme Elkaddouri
     email: "1(1)"
+    last_registration: 2013-11-08
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -121,6 +129,7 @@
     phone: (0)650770054
     parent: Brahim
     email: "2(2)"
+    last_registration: 2013-11-07
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -133,6 +142,7 @@
     level: 0 
     phone: (0)650770054
     parent: Brahim
+    last_registration: 2013-11-06
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -146,6 +156,7 @@
     phone: "(0)678457424, (0)659889480"
     parent: Kabyle
     email: "3(1)"
+    last_registration: 2013-11-05
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -158,6 +169,7 @@
     level: 0 
     phone: ''
     parent: Allaoua Mudith
+    last_registration: 2013-11-04
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -170,6 +182,7 @@
     level: 0 
     phone: ''
     parent: ''
+    last_registration: 2013-11-03
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -182,6 +195,7 @@
     level: 1
     phone: (0)611251014
     parent: ''
+    last_registration: 2013-11-02
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -194,6 +208,7 @@
     level: 1
     phone: (0)647228197
     parent: ''
+    last_registration: 2013-11-01
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -207,6 +222,7 @@
     phone: (0)624833028
     parent: Djelloul
     email: "4(1)"
+    last_registration: 2013-10-30
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -219,6 +235,7 @@
     level: 1
     phone: (0)751507517
     parent: Mohamed
+    last_registration: 2013-10-29
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -232,6 +249,7 @@
     phone: (0)388347926
     parent:  ''
     email: "5(1)"
+    last_registration: 2013-10-28
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -245,6 +263,7 @@
     phone: (0)953229713
     parent: Fatima Boaicha
     email: "6(3)"
+    last_registration: 2013-10-27
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -257,6 +276,7 @@
     level: 1
     phone: (0)953229713
     parent: Fatima Boaicha
+    last_registration: 2013-10-26
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -269,6 +289,7 @@
     level: 1
     phone: (0)953229713
     parent: Fatima Boaicha
+    last_registration: 2013-10-25
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -282,6 +303,7 @@
     phone: (0)683398661
     parent: Abdesselam
     email: "7(2)"
+    last_registration: 2013-10-24
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -294,6 +316,7 @@
     level: 1
     phone: (0)980897483
     parent: Kemchissi
+    last_registration: 2013-10-23
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -307,6 +330,7 @@
     phone: (0)642450654
     parent: Aboubakr
     email: "8(1)"
+    last_registration: 2013-10-22
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -319,6 +343,7 @@
     level: 1
     phone: (0)388450524
     parent: Olfadridi
+    last_registration: 2013-10-21
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -332,6 +357,7 @@
     phone: "(0)670253306, (0)673163572"
     parent: '' 
     email: "9(1)"
+    last_registration: 2013-10-20
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -345,6 +371,7 @@
     phone: (0)369314540
     parent: Tami
     email: "10(1)"
+    last_registration: 2013-10-19
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -358,6 +385,7 @@
     phone: (0)388600656
     parent: Mustapha
     email: "11(2)"
+    last_registration: 2013-10-18
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -370,6 +398,7 @@
     level: 1
     phone: "(0)388600656, 0609155097"
     parent: Mustapha
+    last_registration: 2013-10-17
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -383,6 +412,7 @@
     phone: (0)673401760
     parent: Moustapha
     email: "12(2)"
+    last_registration: 2013-10-16
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -395,6 +425,7 @@
     level: 1
     phone: (0)673401760
     parent: Moustapha
+    last_registration: 2013-10-15
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -407,6 +438,7 @@
     level: 1
     phone: (0)620796220
     parent: Jawad
+    last_registration: 2013-10-14
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -419,6 +451,7 @@
     level: 1
     phone: (0)620796220
     parent: Jawad
+    last_registration: 2013-10-13
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
@@ -431,6 +464,7 @@
     level: 1
     phone: '' 
     parent: '' 
+    last_registration: 2013-10-12
     added: 2013-11-16 21:11:00.000000+00:00
     updated: 2013-11-16 21:11:00.000000+00:00
   model: association.student
