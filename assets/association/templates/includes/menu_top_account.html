@@ -7,7 +7,7 @@
     <div class="menu">
         <a class="item" href="{% url "account-detail" 1 %}"><i class="setting icon"></i>{% trans "My Account" %}</a>
         <!--<a class="item"><i class="settings icon"></i>Administration</a>-->
-        <a class="item" href="{% url "admin:index" %}"><i class="settings icon"></i>{% trans "Administration" %}</a>
+        <a class="item" href="{% url "admin:index" %}" target="_blank"><i class="settings icon"></i>{% trans "Administration" %}</a>
 
         <form action="{% url 'set_language' %}" method="post">
             {% csrf_token %}

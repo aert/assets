@@ -12,7 +12,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns(
-    'core.views',
+    'association.views',
     url(r'^$', RedirectView.as_view(url=reverse_lazy('students')), name='home'),
 
     # Students

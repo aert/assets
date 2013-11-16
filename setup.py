@@ -28,6 +28,7 @@ requires_base = [
     'gunicorn==18.0',
     'django-lineage==0.2.0',
     'dj-static==0.0.5',
+    'suit==0.2.5',
 ]
 
 requires_dev = [

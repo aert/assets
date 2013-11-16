@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-15 18:18+0000\n"
+"POT-Creation-Date: 2013-11-16 16:15+0100\n"
 "PO-Revision-Date: 2013-11-15 16:05+01\n"
 "Last-Translator: AERT <dev.aert@gmail.com>\n"
 "Language-Team: French <dev.aert@gmail.com>\n"
@@ -18,42 +18,88 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: core/templates/accounts_detail.html:5
-#: core/templates/accounts_detail.html:12
-#: core/templates/includes/menu_top_account.html:8
+#: association/models.py:10
+msgid "name"
+msgstr "nom"
+
+#: association/models.py:11
+msgid "surname"
+msgstr "prénom"
+
+#: association/models.py:12
+msgid "address"
+msgstr "adresse"
+
+#: association/models.py:14 association/models.py:29
+msgid "is deleted"
+msgstr "supprimé ?"
+
+#: association/models.py:17
+msgid "student"
+msgstr "élève"
+
+#: association/models.py:18
+msgid "students"
+msgstr "élèves"
+
+#: association/models.py:26
+msgid "month"
+msgstr "mois"
+
+#: association/models.py:27
+msgid "year"
+msgstr "année"
+
+#: association/models.py:32 association/models.py:33
+msgid "treasury"
+msgstr "trésorie"
+
+#: association/templates/accounts_detail.html:5
+#: association/templates/accounts_detail.html:12
+#: association/templates/includes/menu_top_account.html:8
 msgid "My Account"
 msgstr "Mon compte"
 
-#: core/templates/login.html:30
+#: association/templates/login.html:30
 msgid "Assets Management"
 msgstr "Gestion des Ressources"
 
-#: core/templates/login.html:57
+#: association/templates/login.html:57
 msgid "Login"
 msgstr "Connexion"
 
-#: core/templates/students.html:5 core/templates/students.html.py:11
-#: core/templates/includes/menu_top.html:9
+#: association/templates/students.html:5
+#: association/templates/students.html:11
+#: association/templates/includes/menu_top.html:9
 msgid "Students"
 msgstr "Élèves"
 
-#: core/templates/treasury.html:5 core/templates/treasury.html.py:11
-#: core/templates/includes/menu_top.html:12
+#: association/templates/treasury.html:5
+#: association/templates/treasury.html:11
+#: association/templates/includes/menu_top.html:12
 msgid "Treasury"
 msgstr "Trésorie"
 
-#: core/templates/includes/menu_top.html:18
+#: association/templates/includes/menu_top.html:18
 msgid "Search..."
 msgstr "Rechercher..."
 
-#: core/templates/includes/menu_top_account.html:10
+#: association/templates/includes/menu_top_account.html:10
 msgid "Administration"
 msgstr "Administration"
 
-#: core/templates/includes/menu_top_account.html:16
+#: association/templates/includes/menu_top_account.html:16
 msgid "Language"
 msgstr "Langue"
 
-#: core/templates/includes/menu_top_account.html:18
+#: association/templates/includes/menu_top_account.html:18
 msgid "Logout"
 msgstr "Se déconnecter"
+
+#: webui/settings/base.py:102 webui/settings/base.py:108
+msgid "Association"
+msgstr "Association"
+
+#: webui/settings/base.py:111
+msgid "Authorizations"
+msgstr "Permissions"

@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 from os.path import abspath, dirname, join
 from sys import path
 from django.conf import global_settings
+from django.utils.translation import ugettext_lazy as _
 
 BASE_DIR = dirname(dirname(dirname(abspath(__file__))))
 ROOT_DIR = dirname(BASE_DIR)
@@ -39,6 +40,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'suit',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -47,7 +49,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'lineage',
     'assets.common',
-    'assets.core',
+    'assets.association',
+    'south',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -78,7 +81,7 @@ LANGUAGES = (
 )
 
 LANGUAGE_CODE = 'fr'
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Paris'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
@@ -95,3 +98,18 @@ TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
     'django.core.context_processors.request',
     'django.core.context_processors.i18n',
 )
+
+SUIT_CONFIG = {
+    'ADMIN_NAME': _('Association'),
+    'MENU': (
+        # Keep original label and models
+        'sites',
+
+        # Rename app and set icon
+        {'app': 'association', 'label': _('Association'), 'icon':'icon-leaf'},
+        '-',
+        # Reorder app models
+        {'app': 'auth', 'label': _('Authorizations'), 'icon':'icon-lock'},
+
+    ),
+}
