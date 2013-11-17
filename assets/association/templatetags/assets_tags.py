@@ -10,4 +10,6 @@ def next_lang():
     cur_language = translation.get_language()
     if cur_language == "fr":
         return "en"
-    return "fr"
+    elif cur_language == "ar":
+        return "fr"
+    return "ar"

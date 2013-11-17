@@ -61,8 +61,8 @@ CHOICES_PAYMENT_TYPE = (
 @python_2_unicode_compatible
 class Earning(models.Model):
     CHOICES_EARNING_TYPE = (
-        (1, _('internal: subscription')),
-        (2, _('internal: other')),
+        (1, _('subscription (internal)')),
+        (2, _('other (internal)')),
         (10, _('external')),
     )
 
@@ -77,7 +77,7 @@ class Earning(models.Model):
         _('payment type'), choices=CHOICES_PAYMENT_TYPE)
 
     from_student = models.ForeignKey(Student, null=True, blank=True)
-    from_other = models.CharField(_('from'), max_length=250, blank=True)
+    from_other = models.CharField(_('from other'), max_length=250, blank=True)
 
     added = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -89,6 +89,12 @@ class Earning(models.Model):
 
     def __str__(self):
         return smart_text('{}: {}'.format(self.payment_date, self.label))
+
+    def is_internal(self):
+        return self.earning_type != 10
+    is_internal.admin_order_field = 'earning_type'
+    is_internal.boolean = True
+    is_internal.short_description = _('internal ?')
 
 
 @python_2_unicode_compatible

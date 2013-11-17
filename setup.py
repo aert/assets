@@ -29,6 +29,8 @@ requires_base = [
     'django-lineage==0.2.0',
     'dj-static==0.0.5',
     'django-suit==0.2.5',
+    'django_select2==4.2.2',
+    'django-import-export==0.1.4',
 ]
 
 requires_dev = [

@@ -40,6 +40,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'assets.common',
+    'assets.association',
     'suit',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -48,8 +50,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'lineage',
-    'assets.common',
-    'assets.association',
+    'django_select2',
+    'import_export',
     'south',
 )
 
@@ -78,6 +80,7 @@ DATABASES = {}
 LANGUAGES = (
     ('fr', 'Français'),
     ('en', 'English'),
+    ('ar', 'Arabia'),
 )
 
 LANGUAGE_CODE = 'fr'
@@ -108,10 +111,13 @@ SUIT_CONFIG = {
         'sites',
 
         # Rename app and set icon
-        {'app': 'association', 'label': _('Association'), 'icon':'icon-leaf'},
+        #{'app': 'association', 'label': _('Association'), 'icon': 'icon-leaf'},
+        {'label': _('Students'),  'url': 'association.student', 'icon': 'icon-user'},
+        {'label': _('Earnings'),  'url': 'association.earning', 'icon': 'icon-plus'},
+        {'label': _('Spendings'), 'url': 'association.spending', 'icon': 'icon-minus'},
         '-',
         # Reorder app models
-        {'app': 'auth', 'label': _('Authorizations'), 'icon':'icon-lock'},
+        {'app': 'auth', 'label': _('Authorizations'), 'icon': 'icon-lock'},
 
     ),
 }

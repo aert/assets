@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-16 16:15+0100\n"
+"POT-Creation-Date: 2013-11-17 08:14+0100\n"
 "PO-Revision-Date: 2013-11-15 16:05+01\n"
 "Last-Translator: AERT <dev.aert@gmail.com>\n"
 "Language-Team: French <dev.aert@gmail.com>\n"
@@ -18,88 +18,218 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: association/models.py:10
+#: association/admin.py:52
+msgid "Contact"
+msgstr ""
+
+#: association/admin.py:54
+msgid "Registration"
+msgstr "Inscription"
+
+#: association/models.py:16
+msgid "Beginner"
+msgstr "Débutant"
+
+#: association/models.py:17
+msgid "Elementary"
+msgstr "Notions"
+
+#: association/models.py:18
+msgid "Intermediate"
+msgstr "Moyen"
+
+#: association/models.py:21
 msgid "name"
 msgstr "nom"
 
-#: association/models.py:11
+#: association/models.py:22
 msgid "surname"
 msgstr "prénom"
 
-#: association/models.py:12
+#: association/models.py:23
 msgid "address"
 msgstr "adresse"
 
-#: association/models.py:14 association/models.py:29
-msgid "is deleted"
-msgstr "supprimé ?"
+#: association/models.py:24
+msgid "class"
+msgstr "classe"
 
-#: association/models.py:17
+#: association/models.py:25
+msgid "level"
+msgstr "niveau"
+
+#: association/models.py:26
+msgid "phone"
+msgstr "téléphone"
+
+#: association/models.py:27
+msgid "parent"
+msgstr "parent"
+
+#: association/models.py:28
+msgid "e-mail"
+msgstr "e-mail"
+
+#: association/models.py:30
+msgid "is active"
+msgstr "actif ?"
+
+#: association/models.py:32
+msgid "last registration"
+msgstr "dernière inscription"
+
+#: association/models.py:41
 msgid "student"
 msgstr "élève"
 
-#: association/models.py:18
+#: association/models.py:42
 msgid "students"
 msgstr "élèves"
 
-#: association/models.py:26
-msgid "month"
-msgstr "mois"
+#: association/models.py:53
+msgid "Cash"
+msgstr "Espèces"
 
-#: association/models.py:27
-msgid "year"
-msgstr "année"
+#: association/models.py:54
+msgid "Credit Card"
+msgstr "Carte Bancaire"
 
-#: association/models.py:32 association/models.py:33
-msgid "treasury"
-msgstr "trésorie"
+#: association/models.py:55
+msgid "Bank Transfer"
+msgstr "Virement"
 
-#: association/templates/accounts_detail.html:5
-#: association/templates/accounts_detail.html:12
-#: association/templates/includes/menu_top_account.html:8
-msgid "My Account"
-msgstr "Mon compte"
+#: association/models.py:56
+msgid "Bank Transfer - Auto"
+msgstr "Virement - Auto"
 
-#: association/templates/login.html:30
-msgid "Assets Management"
-msgstr "Gestion des Ressources"
+#: association/models.py:57
+msgid "Cheque"
+msgstr "Chèque"
 
-#: association/templates/login.html:57
-msgid "Login"
-msgstr "Connexion"
+#: association/models.py:64
+msgid "subscription (internal)"
+msgstr "cotisation (interne)"
 
-#: association/templates/students.html:5
-#: association/templates/students.html:11
-#: association/templates/includes/menu_top.html:9
-msgid "Students"
-msgstr "Élèves"
+#: association/models.py:65
+msgid "other (internal)"
+msgstr "autre (interne)"
 
-#: association/templates/treasury.html:5
-#: association/templates/treasury.html:11
-#: association/templates/includes/menu_top.html:12
-msgid "Treasury"
-msgstr "Trésorie"
+#: association/models.py:66
+msgid "external"
+msgstr "externe"
 
-#: association/templates/includes/menu_top.html:18
-msgid "Search..."
-msgstr "Rechercher..."
+#: association/models.py:70 association/models.py:108
+msgid "payment date"
+msgstr "date de paiement"
 
-#: association/templates/includes/menu_top_account.html:10
-msgid "Administration"
-msgstr "Administration"
+#: association/models.py:72
+msgid "earning type"
+msgstr "type de revenu"
 
-#: association/templates/includes/menu_top_account.html:16
+#: association/models.py:73 association/models.py:111
+msgid "amount"
+msgstr "montant"
+
+#: association/models.py:74 association/models.py:112
+msgid "label"
+msgstr "libellé"
+
+#: association/models.py:75 association/models.py:113
+msgid "description"
+msgstr "description"
+
+#: association/models.py:77 association/models.py:115
+msgid "payment type"
+msgstr "type de paiement"
+
+#: association/models.py:80
+msgid "from other"
+msgstr "venant de"
+
+#: association/models.py:87
+msgid "earning"
+msgstr "revenu"
+
+#: association/models.py:88
+msgid "earnings"
+msgstr "revenus"
+
+#: association/models.py:97
+msgid "internal ?"
+msgstr "interne ?"
+
+#: association/models.py:103
+msgid "fixed expenses"
+msgstr "dépenses fixes"
+
+#: association/models.py:104
+msgid "other"
+msgstr "autres"
+
+#: association/models.py:110
+msgid "spending type"
+msgstr "type de dépense"
+
+#: association/models.py:117
+msgid "to"
+msgstr "pour"
+
+#: association/models.py:124
+msgid "spending"
+msgstr "dépense"
+
+#: association/models.py:125
+msgid "spendings"
+msgstr "dépenses"
+
+#: association/templates/admin/base_site.html:41
 msgid "Language"
 msgstr "Langue"
 
-#: association/templates/includes/menu_top_account.html:18
-msgid "Logout"
-msgstr "Se déconnecter"
+#: association/templates/admin/dashboard/welcome.html:12
+msgid "My Actions"
+msgstr "Mes actions"
 
-#: webui/settings/base.py:102 webui/settings/base.py:108
+#: association/templates/admin/dashboard/welcome.html:17
+msgid "None available"
+msgstr "Aucun disponible"
+
+#: association/templates/admin/dashboard/welcome.html:26
+msgid "added"
+msgstr "ajouté"
+
+#: association/templates/admin/dashboard/welcome.html:27
+msgid "changed"
+msgstr "modifié"
+
+#: association/templates/admin/dashboard/welcome.html:28
+msgid "deleted"
+msgstr "supprimé"
+
+#: association/templates/admin/dashboard/welcome.html:34
+msgid "Unknown content"
+msgstr "Contenu inconnu"
+
+#: association/templates/suit/menu.html:10
+msgid "Home"
+msgstr "Accueil"
+
+#: webui/settings/base.py:107
 msgid "Association"
 msgstr "Association"
 
-#: webui/settings/base.py:111
+#: webui/settings/base.py:115
+msgid "Students"
+msgstr "Élèves"
+
+#: webui/settings/base.py:116
+msgid "Earnings"
+msgstr "Revenus"
+
+#: webui/settings/base.py:117
+msgid "Spendings"
+msgstr "Dépenses"
+
+#: webui/settings/base.py:120
 msgid "Authorizations"
 msgstr "Permissions"
