@@ -6,6 +6,10 @@ from django.utils.encoding import python_2_unicode_compatible
 from django.utils.encoding import smart_text
 
 
+###############################################################################
+# STUDENTS
+###############################################################################
+
 @python_2_unicode_compatible
 class Student(models.Model):
     CHOICES_LEVEL = (
@@ -41,31 +45,78 @@ class Student(models.Model):
         return smart_text('{} {}'.format(self.name, self.surname))
 
 
+###############################################################################
+# TREASURY
+###############################################################################
+
+CHOICES_PAYMENT_TYPE = (
+    (1, _('Cash')),
+    (2, _('Credit Card')),
+    (3, _('Bank Transfer')),
+    (3, _('Bank Transfer - Auto')),
+    (4, _('Cheque')),
+)
+
+
 @python_2_unicode_compatible
-class Treasury(models.Model):
-    CHOICES_MONTH = (
-        (1, _('January')),
-        (2, _('February')),
-        (3, _('March')),
-        (4, _('April')),
-        (5, _('May')),
-        (6, _('June')),
-        (7, _('July')),
-        (8, _('August')),
-        (9, _('September')),
-        (10, _('October')),
-        (11, _('November')),
-        (12, _('December')),
+class Earning(models.Model):
+    CHOICES_EARNING_TYPE = (
+        (1, _('internal: subscription')),
+        (2, _('internal: other')),
+        (10, _('external')),
     )
 
-    month = models.IntegerField(_('month'), choices=CHOICES_MONTH)
-    year = models.IntegerField(_('year'))
+    payment_date = models.DateField(
+        _('payment date'), default=datetime.datetime.now)
+    earning_type = models.PositiveSmallIntegerField(
+        _('earning type'), choices=CHOICES_EARNING_TYPE)
+    amount = models.DecimalField(_('amount'), max_digits=15, decimal_places=2)
+    label = models.CharField(_('label'), max_length=250)
+    description = models.TextField(_('description'), blank=True)
+    payment_type = models.PositiveSmallIntegerField(
+        _('payment type'), choices=CHOICES_PAYMENT_TYPE)
 
-    is_deleted = models.BooleanField(_('is deleted'), default=False)
+    from_student = models.ForeignKey(Student, null=True, blank=True)
+    from_other = models.CharField(_('from'), max_length=250, blank=True)
+
+    added = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
 
     class Meta:
-        verbose_name = _('treasury')
-        verbose_name_plural = _('treasury')
+        ordering = ['-payment_date']
+        verbose_name = _('earning')
+        verbose_name_plural = _('earnings')
 
     def __str__(self):
-        return smart_text('{}/{}'.format(self.month, self.year))
+        return smart_text('{}: {}'.format(self.payment_date, self.label))
+
+
+@python_2_unicode_compatible
+class Spending(models.Model):
+    CHOICES_SPENDING_TYPE = (
+        (1, _('fixed expenses')),
+        (2, _('other')),
+    )
+
+    payment_date = models.DateField(
+        _('payment date'), default=datetime.datetime.now)
+    spending_type = models.PositiveSmallIntegerField(
+        _('spending type'), choices=CHOICES_SPENDING_TYPE)
+    amount = models.DecimalField(_('amount'), max_digits=15, decimal_places=2)
+    label = models.CharField(_('label'), max_length=250)
+    description = models.TextField(_('description'), blank=True)
+    payment_type = models.PositiveSmallIntegerField(
+        _('payment type'), choices=CHOICES_PAYMENT_TYPE)
+
+    to = models.CharField(_('to'), max_length=250, blank=True)
+
+    added = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['-payment_date']
+        verbose_name = _('spending')
+        verbose_name_plural = _('spendings')
+
+    def __str__(self):
+        return smart_text('{}: {}'.format(self.payment_date, self.label))
