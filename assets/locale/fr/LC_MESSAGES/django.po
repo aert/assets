@@ -268,7 +268,7 @@ msgstr "Montant"
 
 #: association/templates/admin/dashboard/includes/_welcome_dashboard.html:29
 msgid "Global Yearly Breakdown"
-msgstr "Répartition Annuelle Totale"
+msgstr "Répartition annuelle"
 
 #: association/templates/admin/dashboard/includes/_welcome_dashboard.html:39
 #: association/templates/admin/dashboard/includes/_welcome_dashboard.html:51
