@@ -14,11 +14,6 @@ def view_dashboard(request):
     year = datetime.datetime.now().year
     results, total_earning, total_spending = get_yearly_dashboard_data(year)
 
-    total_earning = 100 * total_earning / (total_earning + total_spending)
-    total_spending = 100 * total_spending / (total_earning + total_spending)
-    total_earning = "{0:.2f}".format(total_earning)
-    total_spending = "{0:.2f}".format(total_spending)
-
     # Send to Template
     context['title'] = _('Dashboard')
     context['results'] = results

@@ -1,4 +1,5 @@
 {% load i18n %}
+{% load assets_tags %}
 
 <script>
 $(function () { 
@@ -36,23 +37,23 @@ $(function () {
         series: [{
             type: 'column',
             name: '{% trans "Earnings" %}',
-            data: [ {% for res in results %} {{ res.amount_earning }}, {% endfor %} ],
+            data: [ {% for res in results %} {{ res.amount_earning|intchart }}, {% endfor %} ],
             color: '#69CD4B'
         }, {
             type: 'column',
             name: '{% trans "Spendings" %}',
-            data: [ {% for res in results %} {{ res.amount_spending }}, {% endfor %} ],
+            data: [ {% for res in results %} {{ res.amount_spending|intchart }}, {% endfor %} ],
             color: '#FF6F34'
         }, {
                 type: 'pie',
                 name: '{% trans "Total Breakdown" %}',
                 data: [{
                     name: '{% trans "Earnings" %}',
-                    y: {{ total_earning }},
+                    y: {{ total_earning|intchart }},
                     color: '#69CD4B'
                 }, {
                     name: '{% trans "Spendings" %}',
-                    y: {{ total_spending }},
+                    y: {{ total_spending|intchart }},
                     color: '#FF6F34'
                 }],
                 center: [100, 80],
