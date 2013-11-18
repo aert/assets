@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-17 08:14+0100\n"
+"POT-Creation-Date: 2013-11-18 05:54+0100\n"
 "PO-Revision-Date: 2013-11-15 16:05+01\n"
 "Last-Translator: AERT <dev.aert@gmail.com>\n"
 "Language-Team: French <dev.aert@gmail.com>\n"
@@ -20,11 +20,59 @@ msgstr ""
 
 #: association/admin.py:52
 msgid "Contact"
-msgstr ""
+msgstr "Contact"
 
 #: association/admin.py:54
 msgid "Registration"
 msgstr "Inscription"
+
+#: association/facades.py:7
+msgid "January"
+msgstr "Janvier"
+
+#: association/facades.py:8
+msgid "February"
+msgstr "Février"
+
+#: association/facades.py:9
+msgid "March"
+msgstr "Mars"
+
+#: association/facades.py:10
+msgid "April"
+msgstr "Avril"
+
+#: association/facades.py:11
+msgid "May"
+msgstr "Mai"
+
+#: association/facades.py:12
+msgid "June"
+msgstr "Juin"
+
+#: association/facades.py:13
+msgid "July"
+msgstr "Juillet"
+
+#: association/facades.py:14
+msgid "August"
+msgstr "Août"
+
+#: association/facades.py:15
+msgid "September"
+msgstr "Septembre"
+
+#: association/facades.py:16
+msgid "October"
+msgstr "Octobre"
+
+#: association/facades.py:17
+msgid "November"
+msgstr "Novembre"
+
+#: association/facades.py:18
+msgid "December"
+msgstr "Décembre"
 
 #: association/models.py:16
 msgid "Beginner"
@@ -118,7 +166,7 @@ msgstr "autre (interne)"
 msgid "external"
 msgstr "externe"
 
-#: association/models.py:70 association/models.py:108
+#: association/models.py:70 association/models.py:112
 msgid "payment date"
 msgstr "date de paiement"
 
@@ -126,19 +174,19 @@ msgstr "date de paiement"
 msgid "earning type"
 msgstr "type de revenu"
 
-#: association/models.py:73 association/models.py:111
+#: association/models.py:73 association/models.py:115
 msgid "amount"
 msgstr "montant"
 
-#: association/models.py:74 association/models.py:112
+#: association/models.py:74 association/models.py:116
 msgid "label"
 msgstr "libellé"
 
-#: association/models.py:75 association/models.py:113
+#: association/models.py:75 association/models.py:117
 msgid "description"
 msgstr "description"
 
-#: association/models.py:77 association/models.py:115
+#: association/models.py:77 association/models.py:119
 msgid "payment type"
 msgstr "type de paiement"
 
@@ -158,27 +206,27 @@ msgstr "revenus"
 msgid "internal ?"
 msgstr "interne ?"
 
-#: association/models.py:103
+#: association/models.py:107
 msgid "fixed expenses"
 msgstr "dépenses fixes"
 
-#: association/models.py:104
+#: association/models.py:108
 msgid "other"
 msgstr "autres"
 
-#: association/models.py:110
+#: association/models.py:114
 msgid "spending type"
 msgstr "type de dépense"
 
-#: association/models.py:117
+#: association/models.py:121
 msgid "to"
 msgstr "pour"
 
-#: association/models.py:124
+#: association/models.py:128
 msgid "spending"
 msgstr "dépense"
 
-#: association/models.py:125
+#: association/models.py:129
 msgid "spendings"
 msgstr "dépenses"
 
@@ -186,50 +234,74 @@ msgstr "dépenses"
 msgid "Language"
 msgstr "Langue"
 
-#: association/templates/admin/dashboard/welcome.html:12
+#: association/templates/admin/dashboard/welcome.html:13
 msgid "My Actions"
 msgstr "Mes actions"
 
-#: association/templates/admin/dashboard/welcome.html:17
+#: association/templates/admin/dashboard/welcome.html:18
 msgid "None available"
 msgstr "Aucun disponible"
 
-#: association/templates/admin/dashboard/welcome.html:26
+#: association/templates/admin/dashboard/welcome.html:27
 msgid "added"
 msgstr "ajouté"
 
-#: association/templates/admin/dashboard/welcome.html:27
+#: association/templates/admin/dashboard/welcome.html:28
 msgid "changed"
 msgstr "modifié"
 
-#: association/templates/admin/dashboard/welcome.html:28
+#: association/templates/admin/dashboard/welcome.html:29
 msgid "deleted"
 msgstr "supprimé"
 
-#: association/templates/admin/dashboard/welcome.html:34
+#: association/templates/admin/dashboard/welcome.html:35
 msgid "Unknown content"
 msgstr "Contenu inconnu"
+
+#: association/templates/admin/dashboard/includes/_welcome_dashboard.html:15
+msgid "DashBoard"
+msgstr "Tableau de bord"
+
+#: association/templates/admin/dashboard/includes/_welcome_dashboard.html:24
+msgid "Amount"
+msgstr "Montant"
+
+#: association/templates/admin/dashboard/includes/_welcome_dashboard.html:29
+msgid "Global Yearly Breakdown"
+msgstr "Répartition Annuelle Totale"
+
+#: association/templates/admin/dashboard/includes/_welcome_dashboard.html:39
+#: association/templates/admin/dashboard/includes/_welcome_dashboard.html:51
+#: webui/settings/base.py:115
+msgid "Earnings"
+msgstr "Revenus"
+
+#: association/templates/admin/dashboard/includes/_welcome_dashboard.html:44
+#: association/templates/admin/dashboard/includes/_welcome_dashboard.html:55
+#: webui/settings/base.py:116
+msgid "Spendings"
+msgstr "Dépenses"
+
+#: association/templates/admin/dashboard/includes/_welcome_dashboard.html:49
+msgid "Total Amount"
+msgstr "Montant total"
 
 #: association/templates/suit/menu.html:10
 msgid "Home"
 msgstr "Accueil"
 
-#: webui/settings/base.py:107
+#: association/views/admin.py:18
+msgid "Dashboard"
+msgstr "Tableau de bord"
+
+#: webui/settings/base.py:106
 msgid "Association"
 msgstr "Association"
 
-#: webui/settings/base.py:115
+#: webui/settings/base.py:114
 msgid "Students"
 msgstr "Élèves"
 
-#: webui/settings/base.py:116
-msgid "Earnings"
-msgstr "Revenus"
-
-#: webui/settings/base.py:117
-msgid "Spendings"
-msgstr "Dépenses"
-
-#: webui/settings/base.py:120
+#: webui/settings/base.py:119
 msgid "Authorizations"
 msgstr "Permissions"

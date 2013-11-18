@@ -26,7 +26,7 @@ $(function () {
         },
             labels: {
                 items: [{
-                    html: '{% trans "Total Breakdown" %}',
+                    html: '{% trans "Global Yearly Breakdown" %}',
                     style: {
                         left: '40px',
                         top: '8px',
@@ -46,7 +46,7 @@ $(function () {
             color: '#FF6F34'
         }, {
                 type: 'pie',
-                name: '{% trans "Total Breakdown" %}',
+                name: '{% trans "Total Amount" %}',
                 data: [{
                     name: '{% trans "Earnings" %}',
                     y: {{ total_earning|intchart }},
@@ -56,7 +56,7 @@ $(function () {
                     y: {{ total_spending|intchart }},
                     color: '#FF6F34'
                 }],
-                center: [100, 80],
+                center: [100, 60],
                 size: 100,
                 showInLegend: false,
                 dataLabels: {
