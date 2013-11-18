@@ -13,13 +13,17 @@ CHOICES_YEAR = CHOICES_YEAR.items()
 
 
 class DashboardForm(forms.Form):
-    year = forms.ChoiceField(choices=CHOICES_YEAR)
+    year = forms.ChoiceField(
+        choices=CHOICES_YEAR, label='',
+        initial=datetime.datetime.now().year)
     year.widget.attrs['class'] = 'auto-width search-filter'
 
 
 def view_dashboard(request):
     template_name = 'admin/dashboard/welcome.html'
     context = RequestContext(request)
+
+    context['title'] = _('Dashboard')
 
     if request.method == 'POST':
         form = DashboardForm()
