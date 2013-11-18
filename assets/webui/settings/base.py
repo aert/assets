@@ -40,7 +40,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
-    'assets.common',
     'assets.association',
     'suit',
     'django.contrib.admin',
