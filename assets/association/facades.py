@@ -32,7 +32,7 @@ def get_yearly_dashboard_data(year):
     total_spending = 0
 
     results = []
-    for month_num in range(1, 12):
+    for month_num in range(1, 13):
         res = MonthlyResult(month_num, 0, 0)
         results.append(res)
 
@@ -51,5 +51,17 @@ def get_yearly_dashboard_data(year):
             month_num = res.payment_date.month
             results[month_num - 1].amount_spending += res.amount
             total_spending += res.amount
+
+    # Trim starting and ending results
+    trim_start = 0
+    while trim_start < 12 and results[trim_start].amount_earning == 0 \
+                 and results[trim_start].amount_spending == 0:
+        trim_start += 1
+    trim_end = 11
+    while trim_end > 0 and results[trim_end].amount_earning == 0 \
+                 and results[trim_end].amount_spending == 0:
+        trim_end -= 1
+    if trim_start != 12:
+        results = results[trim_start:trim_end + 1]
 
     return (results, total_earning, total_spending)

@@ -79,7 +79,7 @@ DATABASES = {}
 LANGUAGES = (
     ('fr', 'Français'),
     ('en', 'English'),
-    ('ar', 'Arabia'),
+    #('ar', 'Arabia'),
 )
 
 LANGUAGE_CODE = 'fr'
