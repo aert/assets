@@ -8,13 +8,13 @@ from django.template import RequestContext
 
 CHOICES_YEAR = {}
 for year in range(2012, datetime.datetime.now().year + 1):
-    CHOICES_YEAR[year] = year
-CHOICES_YEAR = (CHOICES_YEAR.items(),)
-CHOICES_YEAR = ((2012, "2012"), (2013, "2013"),)
+    CHOICES_YEAR[year] = "{}".format(year)
+CHOICES_YEAR = CHOICES_YEAR.items()
 
 
 class DashboardForm(forms.Form):
     year = forms.ChoiceField(choices=CHOICES_YEAR)
+    year.widget.attrs['class'] = 'auto-width search-filter'
 
 
 def view_dashboard(request):

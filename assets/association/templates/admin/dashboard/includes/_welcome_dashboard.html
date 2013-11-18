@@ -4,9 +4,19 @@
     <div id="changelist" class="module filtered">
         <div class="toolbar-content clearfix">
             <div id="toolbar" class="clearfix">
-                <form id="changelist-search" class="form-inline" method="get" action="">
+                <form id="changelist-search" class="form-inline" method="post" action="{% url "admin:index" %}">
+                    {% csrf_token %}
                     <div class="search-container">
-                        <span class="search-filters">
+                        <span class="search-filters z_admin_200">
+                            {# Include the hidden fields #}
+                            {% for hidden in form.hidden_fields %}
+                            {{ hidden }}
+                            {% endfor %}
+                            {# Include the visible fields #}
+                            {% for field in form.visible_fields %}
+                                {{ field.errors }}
+                                {{ field.label_tag }} {{ field }}
+                            {% endfor %}
                         </span>
                         <input class="btn btn-info" type="submit" value="{% trans "Display" %}"/>
                     </div>
