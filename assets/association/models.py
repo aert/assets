@@ -46,7 +46,7 @@ class Student(models.Model):
 
 
 ###############################################################################
-# TREASURY
+# EARNING
 ###############################################################################
 
 CHOICES_PAYMENT_TYPE = (
@@ -96,6 +96,10 @@ class Earning(models.Model):
     is_internal.boolean = True
     is_internal.short_description = _('internal ?')
 
+
+###############################################################################
+# SPENDING
+###############################################################################
 
 @python_2_unicode_compatible
 class Spending(models.Model):

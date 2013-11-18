@@ -1,38 +1,30 @@
 import datetime
 from django.utils.translation import ugettext_lazy as _
-from django import forms
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-#from ..models import Earning
-
-
-CHOICES_YEAR = {}
-for year in range(2012, datetime.datetime.now().year + 1):
-    CHOICES_YEAR[year] = "{}".format(year)
-CHOICES_YEAR = CHOICES_YEAR.items()
-
-
-class DashboardForm(forms.Form):
-    year = forms.ChoiceField(
-        choices=CHOICES_YEAR, label='',
-        initial=datetime.datetime.now().year)
-    year.widget.attrs['class'] = 'auto-width search-filter'
+from ..facades import get_yearly_dashboard_data
+#import logging
 
 
 def view_dashboard(request):
     template_name = 'admin/dashboard/welcome.html'
     context = RequestContext(request)
 
-    context['title'] = _('Dashboard')
+    # Get results
+    year = datetime.datetime.now().year
+    results, total_earning, total_spending = get_yearly_dashboard_data(year)
 
-    if request.method == 'POST':
-        form = DashboardForm()
-        if form.is_valid():
-            results = form.save()
-            return render_to_response(
-                template_name, {'form': form, 'results': results},
-                context_instance=context)
-    else:
-        form = DashboardForm()
+    total_earning = 100 * total_earning / (total_earning + total_spending)
+    total_spending = 100 * total_spending / (total_earning + total_spending)
+    total_earning = "{0:.2f}".format(total_earning)
+    total_spending = "{0:.2f}".format(total_spending)
+
+    # Send to Template
+    context['title'] = _('Dashboard')
+    context['results'] = results
+    context['total_earning'] = total_earning
+    context['total_spending'] = total_spending
+
+
     return render_to_response(
-        template_name, {'form': form}, context_instance=context)
+        template_name, context_instance=context)
