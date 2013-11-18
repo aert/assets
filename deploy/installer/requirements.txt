@@ -1,1 +1,1 @@
-webfolder
+assets
