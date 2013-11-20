@@ -73,6 +73,6 @@ setup(name='assets',
       extras_require=extras_requires,
       entry_points="""\
       [console_scripts]
-      assets = assets.manage:main
+      aert-assets = assets.manage:main
       """,
       )

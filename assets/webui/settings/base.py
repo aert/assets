@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 from os.path import abspath, dirname, join
 from sys import path
 from django.conf import global_settings
-from django.utils.translation import ugettext_lazy as _
 
 BASE_DIR = dirname(dirname(dirname(abspath(__file__))))
 ROOT_DIR = dirname(BASE_DIR)
@@ -97,13 +96,15 @@ STATIC_ROOT = join(PUBLIC_ROOT, 'assets')
 STATIC_URL = '/static/'
 
 #####
+SITE_NAME = 'Association'
+
 TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
     'django.core.context_processors.request',
     'django.core.context_processors.i18n',
 )
 
 SUIT_CONFIG = {
-    'ADMIN_NAME': _('Association'),
+    'ADMIN_NAME': SITE_NAME,
     'SEARCH_URL': '/admin/association/student',
     'MENU': (
         # Keep original label and models
@@ -111,12 +112,12 @@ SUIT_CONFIG = {
 
         # Rename app and set icon
         #{'app': 'association', 'label': _('Association'), 'icon': 'icon-leaf'},
-        {'label': _('Students'),  'url': 'association.student', 'icon': 'icon-user'},
-        {'label': _('Earnings'),  'url': 'association.earning', 'icon': 'icon-plus'},
-        {'label': _('Spendings'), 'url': 'association.spending', 'icon': 'icon-minus'},
+        {'label': 'Students',  'url': 'association.student', 'icon': 'icon-user'},
+        {'label': 'Earnings',  'url': 'association.earning', 'icon': 'icon-plus'},
+        {'label': 'Spendings', 'url': 'association.spending', 'icon': 'icon-minus'},
         '-',
         # Reorder app models
-        {'app': 'auth', 'label': _('Authorizations'), 'icon': 'icon-lock'},
+        {'app': 'auth', 'label': 'Authorizations', 'icon': 'icon-lock'},
 
     ),
 }

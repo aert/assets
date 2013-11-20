@@ -45,8 +45,8 @@ develop_deps:
 	# For wheel
 	pip install --upgrade pip setuptools
 
-dev_runserver:
-	export APP_CONFIG_assets=`pwd`/assets/etc/config_develop.ini; assets runserver 0.0.0.0:8002
+runserver:
+	export APP_CONFIG_ASSETS=`pwd`/assets/etc/config_develop.ini; aert-assets runserver 0.0.0.0:8002
 
 semantic_latest:
 	@mkdir -p build/
