@@ -19,7 +19,7 @@ def get_main(option):
 
 
 def get_optional_conf(section, option):
-    value = ""
+    value = ''
     if config.has_option(section, option):
         value = config.get(section, option)
 
@@ -61,6 +61,16 @@ else:
         DATABASE_HOST = get_db('DATABASE_HOST_')
         DATABASE_PORT = get_db('DATABASE_PORT_')
         TEST_DATABASE_NAME = get_db('TEST_DATABASE_NAME_')
+        DATABASES = {
+            'default': {
+                'ENGINE': DATABASE_ENGINE,
+                'NAME': DATABASE_NAME,
+                'USER': DATABASE_USER,
+                'PASSWORD': DATABASE_PASSWORD,
+                'HOST': DATABASE_HOST,
+                'PORT': DATABASE_PORT,
+            }
+        }
 
     # [secrets]
     SECRET_KEY = config.get('secrets', 'SECRET_KEY')
