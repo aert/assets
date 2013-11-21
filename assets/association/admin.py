@@ -35,7 +35,7 @@ class StudentAdmin(ExportMixin, ModelAdmin):
     form = StudentForm
     formats = EXPORT_FORMATS
     search_fields = (
-        'name', 'surname', 'adress', 'classroom', 'email', 'parent',
+        'name', 'surname', 'classroom', 'email', 'parent',
         'last_registration'
     )
     list_display = (
