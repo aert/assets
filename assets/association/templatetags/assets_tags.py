@@ -15,6 +15,7 @@ def next_lang():
     #    return "ar"
     return "fr"
 
+
 @register.filter('intchart')
 def intchart(value):
     orig = force_unicode(value)

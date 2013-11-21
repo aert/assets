@@ -9,7 +9,8 @@ admin.autodiscover()
 
 urlpatterns = patterns(
     'association.views',
-    url(r'^$', RedirectView.as_view(url=reverse_lazy('admin:index')), name='home'),
+    url(r'^$', RedirectView.as_view(url=reverse_lazy('admin:index')),
+        name='home'),
     # Admin
     url(r'^admin/', include(admin.site.urls)),
 )

@@ -8,7 +8,10 @@ class AdminMixin(object):
         return super(AdminMixin, self).__init__(*args, **kwargs)
 
     def get_urls(self):
-        """Add our dashboard view to the admin urlconf. Deleted the default index."""
+        """
+           Add our dashboard view to the admin urlconf.
+           Deleted the default index.
+        """
         from django.conf.urls import patterns, url
         from .views.admin import view_dashboard
 

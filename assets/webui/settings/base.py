@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 from os.path import abspath, dirname, join
-from sys import path
 from django.conf import global_settings
 
 BASE_DIR = dirname(dirname(dirname(abspath(__file__))))
@@ -111,10 +110,12 @@ SUIT_CONFIG = {
         'sites',
 
         # Rename app and set icon
-        #{'app': 'association', 'label': _('Association'), 'icon': 'icon-leaf'},
-        {'label': 'Students',  'url': 'association.student', 'icon': 'icon-user'},
-        {'label': 'Earnings',  'url': 'association.earning', 'icon': 'icon-plus'},
-        {'label': 'Spendings', 'url': 'association.spending', 'icon': 'icon-minus'},
+        {'label': 'Students',  'url': 'association.student',
+            'icon': 'icon-user'},
+        {'label': 'Earnings',  'url': 'association.earning',
+            'icon': 'icon-plus'},
+        {'label': 'Spendings', 'url': 'association.spending',
+            'icon': 'icon-minus'},
         '-',
         # Reorder app models
         {'app': 'auth', 'label': 'Authorizations', 'icon': 'icon-lock'},

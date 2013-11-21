@@ -52,7 +52,8 @@ class StudentAdmin(ExportMixin, ModelAdmin):
         (_('Contact'), {
             'fields': ['phone', 'email', 'adress']}),
         (_('Registration'), {
-            'fields': ['level', 'classroom', 'last_registration', 'is_active']}),
+            'fields': ['level', 'classroom',
+                       'last_registration', 'is_active']}),
     ]
 
 

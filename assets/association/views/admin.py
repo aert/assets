@@ -20,6 +20,5 @@ def view_dashboard(request):
     context['total_earning'] = total_earning
     context['total_spending'] = total_spending
 
-
     return render_to_response(
         template_name, context_instance=context)
