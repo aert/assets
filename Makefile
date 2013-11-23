@@ -88,7 +88,7 @@ tag:
 	git tag -a $$NEW_TAG -m "Created tag: $$NEW_TAG"; \
 	git push --tags;
 
-installer: installer_clean wheel installer_archive
+installer: develop installer_clean wheel installer_archive
 
 installer_clean:
 	rm -rf dist
