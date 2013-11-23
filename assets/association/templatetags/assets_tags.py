@@ -1,6 +1,7 @@
 from django import template
 from django.utils import translation
 from django.utils.encoding import force_unicode
+import assets
 
 
 register = template.Library()
@@ -24,3 +25,8 @@ def intchart(value):
         return new
     else:
         return intchart(new)
+
+
+@register.simple_tag()
+def assets_version():
+    return assets.VERSION
