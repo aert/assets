@@ -87,7 +87,7 @@ tag:
 			read -r -p "New tag: " NEW_TAG; \
 	done; \
 	git tag -a $$NEW_TAG -m "Created tag: $$NEW_TAG"; \
-	@git push --tags;
+	git push --tags;
 
 installer: develop installer_clean wheel installer_archive
 
