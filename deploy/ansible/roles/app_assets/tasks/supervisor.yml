@@ -2,7 +2,7 @@
 
 # Install requirements
 - name: supervisor-apt
-  apt: pkg=$item state=installed
+  apt: pkg={{ item }} state=installed
   with_items:
     - supervisor
 

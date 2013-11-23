@@ -1,16 +1,16 @@
 ---
 
-# webfolder
+# app
 prefix      : /opt/aert
-app_home    : "${prefix}/assets"
-app_env     : "${app_home}/env"
-app_public  : "${app_home}/public"
-app_assets  : "${app_public}/static"
-app_uploads : "${app_home}/uploads"
-app_log     : "${app_home}/log"
-app_fixtures: "${app_home}/fixtures"
-tmp_path    : "${prefix}/tmp"
-#app_servername : "127.0.0.1"
+app_home    : "{{ prefix }}/assets"
+app_env     : "{{ app_home }}/env"
+app_public  : "{{ app_home }}/public"
+app_assets  : "{{ app_public }}/static"
+app_uploads : "{{ app_home }}/uploads"
+app_log     : "{{ app_home }}/log"
+app_fixtures: "{{ app_home }}/fixtures"
+tmp_path    : "{{ prefix }}/tmp"
+app_servername : "{{ app_servername }}"
 #installer_local : setup_assets_1.1.1
 installer_dirname : "{{ installer_local | basename }}"
 installer_tgz : "{{ installer_local | mandatory }}.tgz"

@@ -2,15 +2,12 @@
 # Install Nginx
 
 - name: nginx-apt
-  apt: pkg=$item state=installed
+  apt: pkg={{ item }} state=installed
   with_items:
     - nginx
   tags: nginx
 
 # Directories
-
-- name: nginx-${www-home}
-  file: path=${www-home} state=directory owner=www-data group=www-data
         
 - name: nginx-/etc/nginx/sites-available
   file: path=/etc/nginx/sites-available state=directory owner=root mode=0755

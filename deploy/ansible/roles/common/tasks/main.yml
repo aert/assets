@@ -1,7 +1,7 @@
 ---
 
 - name: Install base pkgs
-  apt: pkg=$item state=installed update_cache=yes
+  apt: pkg={{ item }} state=installed update_cache=yes
   with_items:
     - vim
     - python

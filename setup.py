@@ -24,7 +24,7 @@ requires_base = [
     'Django==1.6',
     #'django-braces==1.2.2',
     #'django-model-utils==1.5.0',
-    'South==0.8.3',
+    'South==0.8.4',
     'gunicorn==18.0',
     'django-lineage==0.2.0',
     'django-suit==0.2.5',
@@ -34,16 +34,16 @@ requires_base = [
 ]
 
 requires_dev = [
-    'bpython>=0.12',
-    'django-debug-toolbar>=0.11.0',
+    'bpython==0.12',
+    'django-debug-toolbar==0.11.0',
     # Build tools
-    'pip>=1.3.1',
-    'wheel>=0.22.0',
-    'pip-tools>=0.3.4',
-    'flake8>=2.1.0',
+    'pip==1.4.1',
+    'wheel==0.22.0',
+    'pip-tools==0.3.4',
+    'flake8==2.1.0',
     # Deploy tools
-    'ansible>=1.3.4',
-    'Fabric>=1.8.0',
+    'ansible==1.4',
+    'Fabric==1.8.0',
 ]
 
 extras_requires = {

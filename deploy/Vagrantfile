@@ -22,8 +22,12 @@ Vagrant.configure("2") do |config|
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "ansible/playbook.yml"
     ansible.inventory_path = "ansible/inventory.ini"
-    ansible.extra_vars = { installer_local: INSTALLER_PATH,
-                           app_servername: "127.0.0.1"}
+    #ansible.raw_arguments = "--extra-vars='installer_local=" + INSTALLER_PATH  + " app_servername=127.0.0.1'"
+    extra_vars = { 
+                    app_servername: "127.0.0.1",
+                    installer_local: INSTALLER_PATH
+                 }
+    ansible.raw_arguments = "--extra-vars=" + extra_vars.map { |k,v| "#{k}=#{v}" }.join(" ")
   end
 
   # Customize the box
