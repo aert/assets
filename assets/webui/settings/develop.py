@@ -5,6 +5,7 @@ from .base import *
 
 
 #COMPRESS_ENABLED = True
+LOG_DIR = join(ROOT_DIR, 'logs')
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases

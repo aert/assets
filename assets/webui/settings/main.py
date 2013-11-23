@@ -45,6 +45,8 @@ else:
 
     # [main]
     ALLOWED_HOSTS = get_main('ALLOWED_HOSTS_').split() or ALLOWED_HOSTS
+    LOG_DIR = get_main('LOG_DIR') or LOG_DIR
+    LOGGING['handlers']['file']['filename'] = join(LOG_DIR, 'assets.log')
     if not DEVELOP:
         STATIC_ROOT = config.get('main', 'STATIC_ROOT')
         STATIC_URL = config.get('main', 'STATIC_URL')
