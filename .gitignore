@@ -33,4 +33,5 @@
 # This project
 /public/assets/
 /RELEASE-VERSION
-/deploy/vagrant_ansible_inventory_default
+/deploy/ansible/roles/app_assets/files/initial_data_*.yaml
+/deploy/ansible/roles/app_assets/files/setup_assets_*.tgz

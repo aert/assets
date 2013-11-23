@@ -10,7 +10,7 @@
 
 # Stop Supervisor
 - name: app-stop-supervisor
-  shell: supervisorctl stop assets
+  shell: service supervisor stop
 
 # Create Dirs
 - name: app-dirs
@@ -40,10 +40,24 @@
     - "$app_assets"
     - "$app_uploads"
     - "$app_log"
+    - "$app_fixtures"
 
 # Migrate db
 
 #TODO
+
+# App utility
+- name: app-make-file
+  template: src=Makefile.j2 dest=$app_home/Makefile owner=www-data group=www-data
+
+# Upload Fixtures
+- name: app-fixtures-upload
+  copy: src=$item dest=${app_fixtures} owner=www-data group=www-data
+  with_items:
+    - "initial_data_auth.yaml"
+    - "initial_data_students.yaml"
+    - "initial_data_earnings.yaml"
+    - "initial_data_spendings.yaml"
 
 # Configure App
 - name: app-config-file

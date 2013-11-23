@@ -9,5 +9,5 @@
   roles:
     - common
     - nginx
-    - app
+    - app_assets
 

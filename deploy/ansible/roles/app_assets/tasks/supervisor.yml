@@ -8,7 +8,7 @@
 
 # Start Supervisor
 - name: supervisor-start
-  shell: supervisorctl start assets
+  shell: service supervisor start
 
 # Configure supervisor
 - name: supervisor-file

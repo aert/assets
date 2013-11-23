@@ -1,23 +1,23 @@
 [main]
 DEVELOP = false
-ALLOWED_HOSTS_ = 127.0.0.1
-STATIC_ROOT = 'staticfiles'
-STATIC_URL = '/static/'
-MEDIA_ROOT = /app/assets/uploads
+ALLOWED_HOSTS_ = asso.abdourakhmane.net
+STATIC_ROOT = {{ app_assets }}/
+STATIC_URL = /static/
+MEDIA_ROOT = {{ app_uploads }}
 MEDIA_URL = http://127.0.0.1/media/
 
 [database]
+DATABASE_ENGINE_ = django.db.backends.sqlite3
+DATABASE_NAME_ = {{ app_home }}/database.db
 DATABASE_USER_ =
 DATABASE_PASSWORD_ = 
 DATABASE_HOST_ = 
 DATABASE_PORT_ =
-DATABASE_ENGINE_ =
-DATABASE_NAME_ = 
 TEST_DATABASE_NAME_ = 
 
 [secrets]
-SECRET_KEY = 
-CSRF_MIDDLEWARE_SECRET = 
+SECRET_KEY = ljfoauproazirslkfqmjqmjmj
+CSRF_MIDDLEWARE_SECRET = qjmsfj!jmjdf###lsmkdjao
 
 [cookies]
 SESSION_COOKIE_DOMAIN =
@@ -32,14 +32,14 @@ INTERNAL_IPS_ =
 SKIP_CSRF_MIDDLEWARE = false
 
 [email]
-SERVER_EMAIL = django@localhost
+SERVER_EMAIL = assets@abdourakhmane.net
 EMAIL_HOST = localhost
 
 # the [admins] and [managers] sections are special. Just add lines with
 #  full name = email_address@domain.xx
 # each section must be present but may be empty.
 [admins]
-Adam Smith = adam@localhost
+AERT = dev.aert@gmail.com
 
 [managers]
-John Wayne = john@localhost
+AERT = dev.aert@gmail.com
