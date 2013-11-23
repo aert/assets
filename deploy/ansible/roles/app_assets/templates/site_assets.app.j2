@@ -16,11 +16,11 @@ server {
     ## Static Files
     ## ###############
 
-    #location = /static/ {
-    #    autoindex on;
-    #    expires max;
-    #}
-
+    location ~*  \.(jpg|jpeg|png|gif|css|js|ico)$ {
+        access_log  off;
+        expires             33d;
+    }
+    
     try_files $uri @app;
 
     ## ###############
