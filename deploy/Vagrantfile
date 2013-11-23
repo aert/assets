@@ -22,10 +22,10 @@ Vagrant.configure("2") do |config|
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "ansible/playbook.yml"
     ansible.inventory_path = "ansible/inventory.ini"
-    #ansible.raw_arguments = "--extra-vars='installer_local=" + INSTALLER_PATH  + " app_servername=127.0.0.1'"
     extra_vars = { 
                     app_servername: "192.168.111.224",
-                    installer_local: INSTALLER_PATH
+                    installer_local: INSTALLER_PATH,
+                    with_fixtures: "1"
                  }
     ansible.raw_arguments = "--extra-vars=" + extra_vars.map { |k,v| "#{k}=#{v}" }.join(" ")
   end

@@ -1,41 +1,39 @@
 ---
 
-# Install requirements
-- name: app_assets-apt
+# Dependencies
+- name: app-deps_apt
   apt: pkg={{ item }} state=installed
   with_items:
     - python-virtualenv
     - python-pip
     - supervisor
 
-# Stop Supervisor
-- name: app-stop-supervisor
+# Pre-install
+- name: app-preinst_stop_supervisor
   shell: service supervisor stop
 
-# Create Dirs
-- name: app-dirs
+- name: app-preinst_installer_dirs
   file: path={{ item }} state=directory owner=www-data group=www-data
   with_items:
     - "{{ prefix }}"
     - "{{ tmp_path }}"
 
-# Upload & Install Installer
-- name: app-installer-upload
+- name: app-preinst_installer_upload
   copy: src={{ item }} dest={{ tmp_path }} owner=www-data group=www-data
   with_items:
     - "{{ installer_tgz }}"
 
-- name: app-installer-untar
+- name: app-preinst_installer_untar
   shell: cd {{ tmp_path }} && tar zxf {{ installer_tgz | basename }}
 
-- name: app-installer-install
+- name: app-install
   shell: cd {{ tmp_path }}/{{ installer_dirname }} && make install PREFIX={{ prefix }}
 
-- name: app-installer-clean
+- name: app-postinst_clean_untar_dir
   file: path={{ tmp_path }}/{{ installer_dirname }} state=absent
 
-# Config Dirs 
-- name: app-dirs-app
+# Config 
+- name: app-conf_app_dirs
   file: path={{ item }} state=directory owner=www-data group=www-data  recurse=yes
   with_items:
     - "{{ app_env }}"
@@ -44,16 +42,13 @@
     - "{{ app_log }}"
     - "{{ app_fixtures }}"
 
-# Migrate db
+- name: app-conf_config_file
+  template: src=config.ini.j2 dest={{ app_home }}/config.ini owner=www-data group=www-data
 
-#TODO
-
-# App utility
-- name: app-make-file
+- name: app-conf_makefile
   template: src=Makefile.j2 dest={{ app_home }}/Makefile owner=www-data group=www-data
 
-# Upload Fixtures
-- name: app-fixtures-upload
+- name: app-conf_fixtures_upload
   copy: src={{ item }} dest={{ app_fixtures }} owner=www-data group=www-data
   with_items:
     - "initial_data_auth.yaml"
@@ -61,14 +56,13 @@
     - "initial_data_earnings.yaml"
     - "initial_data_spendings.yaml"
 
-# Configure App
-- name: app-config-file
-  template: src=config_vagrant.ini.j2 dest={{ app_home }}/config.ini owner=www-data group=www-data
+- name: app-conf_fixtures_install
+  shell: cd {{ app_home }} && make all
+  when: with_fixtures == '1'
 
-# Configure gunicorn
-- name: app-gunicorn
+- name: app-conf_gunicorn
   template: src=start_gunicorn.sh.j2 dest={{ app_home }}/start_gunicorn.sh mode=0751 owner=www-data group=www-data
 
-- name: app-perms
+- name: app-conf_perms
   shell: chown -R www-data:www-data {{ app_home }}
 

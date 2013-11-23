@@ -1,5 +1,10 @@
 ---
 
+# external
+app_servername : "{{ app_servername }}"
+installer_local : "{{ installer_local }}"
+with_fixtures : "{{ with_fixtures }}"
+
 # app
 prefix      : /opt/aert
 app_home    : "{{ prefix }}/assets"
@@ -10,7 +15,5 @@ app_uploads : "{{ app_home }}/uploads"
 app_log     : "{{ app_home }}/log"
 app_fixtures: "{{ app_home }}/fixtures"
 tmp_path    : "{{ prefix }}/tmp"
-app_servername : "{{ app_servername }}"
-#installer_local : setup_assets_1.1.1
 installer_dirname : "{{ installer_local | basename }}"
 installer_tgz : "{{ installer_local | mandatory }}.tgz"

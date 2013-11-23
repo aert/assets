@@ -1,17 +1,11 @@
 ---
 
-# Install requirements
-- name: supervisor-apt
-  apt: pkg={{ item }} state=installed
-  with_items:
-    - supervisor
-
 # Start Supervisor
-- name: supervisor-start
+- name: supervisor_start
   shell: service supervisor start
 
 # Configure supervisor
-- name: supervisor-file
+- name: supervisor_add_app
   template: src=supervisor.conf.j2 dest=/etc/supervisor/conf.d/assets.conf
   notify:
     - restart supervisor
