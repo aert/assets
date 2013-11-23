@@ -22,28 +22,29 @@ all:  clean develop vagrant_setup
 ## clean temporary files after a building operation
 clean:
 	@echo "Cleaning..." 
-	rm -rf public/assets/
-	rm -rf `find . -name *.pyc`
-	rm -rf `find . -name *.pyo`
-	rm -rf docs/build
+	@rm -rf public/assets/
+	@rm -rf `find . -name *.pyc`
+	@rm -rf `find . -name *.pyo`
+	@rm -rf docs/build
 
 clean_all:
-	$(MAKE) clean
-	rm -rf build
+	@$(MAKE) clean
+	@rm -rf build
 
 
 # DEVELOP
 # #######
 
 develop:
-	pip install -e .[testing] --download-cache $(PIP_CACHE)
+	@pip install -e .[testing] --download-cache $(PIP_CACHE)
 
 develop_init: develop_deps develop
 
 develop_deps:
-	sudo apt-get install python-dev
+	@sudo apt-get install python-dev
 	# For wheel
-	pip install --upgrade pip setuptools
+	@pip install --upgrade pip setuptools
+	@mkdir -p logs
 
 runserver:
 	export APP_CONFIG_ASSETS=`pwd`/assets/etc/config_develop.ini; aert-assets runserver 0.0.0.0:8002
@@ -62,21 +63,21 @@ semantic_latest:
 vagrant: installer vagrant_up 
 
 vagrant_up:
-	cd $(VAGRANT_PATH); vagrant up
+	@cd $(VAGRANT_PATH); vagrant up
 
 vagrant_ssh:
-	cd $(VAGRANT_PATH); vagrant up; vagrant ssh
+	@cd $(VAGRANT_PATH); vagrant up; vagrant ssh
 
 vagrant_reload:
-	cd $(VAGRANT_PATH); vagrant reload
+	@cd $(VAGRANT_PATH); vagrant reload
 
 vagrant_destroy:
-	cd $(VAGRANT_PATH); vagrant destroy
+	@cd $(VAGRANT_PATH); vagrant destroy
 
 vagrant_provision: installer vagrant_reprovision
 
 vagrant_reprovision: 
-	cd $(VAGRANT_PATH); vagrant provision
+	@cd $(VAGRANT_PATH); vagrant provision
 
 # DEPLOYMENT
 # ##########
@@ -86,24 +87,24 @@ tag:
 			read -r -p "New tag: " NEW_TAG; \
 	done; \
 	git tag -a $$NEW_TAG -m "Created tag: $$NEW_TAG"; \
-	git push --tags;
+	@git push --tags;
 
 installer: develop installer_clean wheel installer_archive
 
 installer_clean:
-	rm -rf dist
-	mkdir -p build/installer
-	rm -rf build/setup_*
+	@rm -rf dist
+	@mkdir -p build/installer
+	@rm -rf build/setup_*
 
 wheel:
-	pip wheel --wheel-dir=build/wheel/wheel-dir . --download-cache $(PIP_CACHE)
-	mv build/wheel/wheel-dir build/installer/wheel-dir
-	rm -rf build/wheel/
+	@pip wheel --wheel-dir=build/wheel/wheel-dir . --download-cache $(PIP_CACHE)
+	@mv build/wheel/wheel-dir build/installer/wheel-dir
+	@rm -rf build/wheel/
 
 installer_archive:
-	cp deploy/installer/Makefile build/installer/
-	sed -i 's/__VERSION__/$(PROJECT_VERSION)/g' build/installer/Makefile
-	cp deploy/installer/requirements.txt build/installer/
-	mv build/installer/ build/setup_$(PROJECT_FILENAME)
-	cd build; tar -czf setup_$(PROJECT_FILENAME).tgz setup_$(PROJECT_FILENAME)/
+	@cp deploy/installer/Makefile build/installer/
+	@sed -i 's/__VERSION__/$(PROJECT_VERSION)/g' build/installer/Makefile
+	@cp deploy/installer/requirements.txt build/installer/
+	@mv build/installer/ build/setup_$(PROJECT_FILENAME)
+	@cd build; tar -czf setup_$(PROJECT_FILENAME).tgz setup_$(PROJECT_FILENAME)/
 

@@ -17,10 +17,10 @@
 /dist
 
 # SQLite3 database files:
-/*.db
+/database.db
 
 # Logs:
-*.log
+/logs/*.log
 
 # Others:
 .coverage
