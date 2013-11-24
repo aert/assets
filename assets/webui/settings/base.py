@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 from os.path import abspath, dirname, join
 from django.conf import global_settings
+from django.utils.translation import ugettext_lazy as _
 
 BASE_DIR = dirname(dirname(dirname(abspath(__file__))))
 ROOT_DIR = dirname(BASE_DIR)
@@ -110,15 +111,19 @@ SUIT_CONFIG = {
         'sites',
 
         # Rename app and set icon
-        {'label': 'Students',  'url': 'association.student',
+        {'label': _('Students'),  'url': 'association.student',
             'icon': 'icon-user'},
-        {'label': 'Earnings',  'url': 'association.earning',
+        '-',
+        {'label': _('Invoices'),  'url': 'association.invoice',
+            'icon': 'icon-barcode'},
+        '-',
+        {'label': _('Earnings'),  'url': 'association.earning',
             'icon': 'icon-plus'},
-        {'label': 'Spendings', 'url': 'association.spending',
+        {'label': _('Spendings'), 'url': 'association.spending',
             'icon': 'icon-minus'},
         '-',
         # Reorder app models
-        {'app': 'auth', 'label': 'Authorizations', 'icon': 'icon-lock'},
+        {'app': 'auth', 'label': _('Authorizations'), 'icon': 'icon-lock'},
 
     ),
 }

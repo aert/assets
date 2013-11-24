@@ -53,6 +53,9 @@ else:
         MEDIA_ROOT = config.get('main', 'MEDIA_ROOT')
         MEDIA_URL = config.get('main', 'MEDIA_URL')
 
+        PROTECTED_MEDIA_ROOT = config.get("main", "PROTECTED_MEDIA_ROOT")
+        PROTECTED_MEDIA_URL = config.get("main", "PROTECTED_MEDIA_URL")
+
     # [database]
     value = get_db('DATABASE_ENGINE_')
     if value:

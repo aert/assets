@@ -1,9 +1,13 @@
 from __future__ import unicode_literals
 import datetime
+import os
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.utils.encoding import python_2_unicode_compatible
 from django.utils.encoding import smart_text
+from django.conf import settings
+from django.core.files.storage import FileSystemStorage
+from django.template.defaultfilters import slugify
 
 
 ###############################################################################
@@ -76,9 +80,12 @@ class Earning(models.Model):
     payment_type = models.PositiveSmallIntegerField(
         _('payment type'), choices=CHOICES_PAYMENT_TYPE)
 
-    from_student = models.ForeignKey(Student, null=True, blank=True)
+    from_student = models.ForeignKey(Student, verbose_name=_('from student'),
+                                     null=True, blank=True)
     from_other = models.CharField(_('from other'), max_length=250, blank=True)
 
+    has_invoice = models.BooleanField(_('has invoice ?'), default=False,
+                                      editable=False)
     added = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
@@ -120,6 +127,8 @@ class Spending(models.Model):
 
     to = models.CharField(_('to'), max_length=250, blank=True)
 
+    has_invoice = models.BooleanField(_('has invoice ?'), default=False,
+                                      editable=False)
     added = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
@@ -130,3 +139,108 @@ class Spending(models.Model):
 
     def __str__(self):
         return smart_text('{}: {}'.format(self.payment_date, self.label))
+
+
+###############################################################################
+# INVOICE
+###############################################################################
+
+fs = FileSystemStorage(location=settings.PROTECTED_MEDIA_ROOT,
+                       base_url=settings.PROTECTED_MEDIA_URL)
+
+
+@python_2_unicode_compatible
+class Invoice(models.Model):
+    INVOICE_UNKNOWN = 0
+    INVOICE_EARNING = 1
+    INVOICE_SPENDING = 2
+    CHOICES_INVOICE_TYPE = (
+        (INVOICE_EARNING, _('Unknown')),
+        (INVOICE_EARNING, _('Earning')),
+        (INVOICE_SPENDING, _('Spending')),
+    )
+
+    # Payment infos
+    invoice_date = models.DateTimeField(
+        _('invoice date'), default=datetime.datetime.now)
+
+    amount = models.DecimalField(_('amount'), max_digits=15, decimal_places=2)
+    label = models.CharField(_('label'), max_length=250)
+    payment_type = models.PositiveSmallIntegerField(
+        _('payment type'), choices=CHOICES_PAYMENT_TYPE)
+
+    # Invoice Infos
+    invoice_type = models.PositiveSmallIntegerField(
+        _('type'), choices=CHOICES_INVOICE_TYPE, editable=False)
+    earning = models.ForeignKey(Earning, null=True, blank=True,
+                                editable=False)
+    spending = models.ForeignKey(Spending, null=True, blank=True,
+                                 editable=False)
+
+    buyer = models.CharField(_('buyer'), max_length=250, blank=True)
+    seller = models.CharField(_('seller'), max_length=250, blank=True)
+
+    def upload_path(self, filename):
+        filename, ext = os.path.splitext(filename)
+        return 'invoices/%s-%s%s' % (
+            self.invoice_date.strftime("%Y%m"),
+            slugify(filename),
+            ext.lower())
+
+    document = models.FileField(
+        _('document'), max_length=250, blank=True, null=True,
+        upload_to=upload_path, storage=fs)
+
+    # Generic date infos
+    added = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['-invoice_date']
+        verbose_name = _('invoice')
+        verbose_name_plural = _('invoices')
+
+    def __str__(self):
+        return smart_text(
+            '{}: {}'.format(self.invoice_date.strftime("%Y-%m-%d"),
+            self.label))
+
+    def save(self, *args, **kwargs):
+        # invoice_type
+        if not self.earning and not self.spending:
+            self.invoice_type = self.INVOICE_UNKNOWN
+        if self.earning and self.spending:
+            self.invoice_type = self.INVOICE_UNKNOWN
+        if self.earning and not self.spending:
+            self.invoice_type = self.INVOICE_EARNING
+        else:
+            self.invoice_type = self.INVOICE_SPENDING
+
+        # compute foreign keys
+        if self.earning:
+            self.earning.has_invoice = True
+            self.earning.save()
+        if self.spending:
+            self.spending.has_invoice = True
+            self.spending.save()
+
+        super(Invoice, self).save(*args, **kwargs)
+
+    def delete(self):
+        # compute foreign keys
+        if self.earning:
+            count = Invoice.objects.filter(earning=self.earning).count()
+            self.earning.has_invoice = count > 1
+            self.earning.save()
+        if self.spending:
+            count = Invoice.objects.filter(spending=self.spending).count()
+            self.spending.has_invoice = count > 1
+            self.spending.save()
+
+        super(Invoice, self).delete()
+
+    def has_document(self):
+        return not not self.document
+    has_document.admin_order_field = 'document'
+    has_document.boolean = True
+    has_document.short_description = _('document ?')

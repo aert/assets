@@ -1,15 +1,19 @@
 from django.contrib import admin
 from django.contrib.admin import ModelAdmin
+from django.contrib.admin import StackedInline
 from django.forms import ModelForm
 from django.forms import TextInput
 from django.utils.translation import ugettext_lazy as _
-from suit.widgets import SuitDateWidget, AutosizedTextarea
+from suit.widgets import SuitDateWidget
+from suit.widgets import SuitSplitDateTimeWidget
+from suit.widgets import AutosizedTextarea
 from django_select2 import AutoModelSelect2Field, Select2Widget
 from import_export.admin import ExportMixin
 import import_export
 from .models import Student
 from .models import Earning
 from .models import Spending
+from .models import Invoice
 
 
 EXPORT_FORMATS = (
@@ -17,6 +21,23 @@ EXPORT_FORMATS = (
     import_export.formats.base_formats.XLS,
     import_export.formats.base_formats.ODS,
 )
+
+
+class InvoiceInline(StackedInline):
+    model = Invoice
+    extra = 0
+    widgets = {
+        'invoice_date': SuitSplitDateTimeWidget,
+        'amount': TextInput(attrs={'class': 'input-small'}),
+    }
+    fieldsets = [
+        (None, {
+            'fields': [
+                ('invoice_date', 'payment_type'),
+                ('label', 'amount'),
+                ('buyer', 'seller'),
+                'document']}),
+    ]
 
 
 ###############################################################################
@@ -36,7 +57,6 @@ class StudentAdmin(ExportMixin, ModelAdmin):
     formats = EXPORT_FORMATS
     search_fields = (
         'name', 'surname', 'classroom', 'email', 'parent',
-        'last_registration'
     )
     list_display = (
         'name', 'surname', 'adress', 'classroom', 'level', 'phone',
@@ -70,8 +90,7 @@ class StudentChoice(AutoModelSelect2Field):
 
 
 class EarningForm(ModelForm):
-    from_student_verbose_name = Earning._meta.\
-        get_field_by_name('from_student')[0].verbose_name
+    from_student_verbose_name = _('from student')
     from_student = StudentChoice(
         label=from_student_verbose_name.capitalize(),
         required=False,
@@ -94,17 +113,18 @@ class EarningForm(ModelForm):
 
 class EarningAdmin(ExportMixin, ModelAdmin):
     form = EarningForm
+    inlines = [InvoiceInline]
     formats = EXPORT_FORMATS
     search_fields = (
         'label', 'description', 'from_other',
     )
     list_display = (
         'payment_date', 'earning_type', 'label', 'amount', 'payment_type',
-        'updated', 'is_internal',
+        'is_internal', 'has_invoice',
     )
     list_filter = (
-        'payment_date', 'earning_type', 'payment_type',
-        'from_student', 'from_other')
+        'payment_date', 'earning_type', 'has_invoice',
+    )
     date_hierarchy = 'payment_date'
 
     fieldsets = [
@@ -139,15 +159,17 @@ class SpendingForm(ModelForm):
 
 class SpendingAdmin(ExportMixin, ModelAdmin):
     form = SpendingForm
+    inlines = [InvoiceInline]
     formats = EXPORT_FORMATS
     search_fields = (
         'label', 'description', 'to',
     )
     list_display = (
         'payment_date', 'spending_type', 'label', 'amount', 'payment_type',
-        'updated',
+        'has_invoice',
     )
-    list_filter = ('payment_date', 'spending_type', 'payment_type', 'to')
+    list_filter = ('payment_date', 'spending_type', 'to',
+                   'has_invoice',)
     date_hierarchy = 'payment_date'
 
     fieldsets = [
@@ -162,3 +184,50 @@ class SpendingAdmin(ExportMixin, ModelAdmin):
 
 
 admin.site.register(Spending, SpendingAdmin)
+
+
+###############################################################################
+# Invoices
+###############################################################################
+
+class InvoiceForm(ModelForm):
+    class Meta:
+        model = Invoice
+        widgets = {
+            'invoice_date': SuitSplitDateTimeWidget,
+            'amount': TextInput(attrs={'class': 'input-small'}),
+            'description': AutosizedTextarea,
+        }
+
+
+class InvoiceAdmin(ExportMixin, ModelAdmin):
+    form = InvoiceForm
+    formats = EXPORT_FORMATS
+    search_fields = (
+        'label', 'description', 'buyer', 'seller',
+    )
+    list_display = (
+        'invoice_date', 'invoice_type', 'label', 'amount', 'payment_type',
+        'buyer', 'seller', 'has_document',
+    )
+    list_filter = ('invoice_date', 'invoice_type', 'payment_type', 'seller')
+    date_hierarchy = 'invoice_date'
+
+    fieldsets = [
+        (None, {
+            'fields': [
+                'invoice_date', 'payment_type',
+                'label', 'amount',
+            ]
+        }),
+        (_('Invoice'), {
+            'fields': [
+                ('buyer', 'seller'),
+                'document']}),
+    ]
+
+    def has_add_permission(self, request):
+        return False
+
+
+admin.site.register(Invoice, InvoiceAdmin)

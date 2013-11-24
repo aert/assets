@@ -4,6 +4,9 @@ PROJECT_VERSION:=$(shell python version.py)
 PROJECT_FILENAME=$(PROJECT_NAME)_$(PROJECT_VERSION)
 VAGRANT_PATH=deploy
 
+CONF=`pwd`/assets/etc/config_develop.ini
+FIXTURES=deploy/ansible/roles/app_assets/files
+
 PIP_CACHE=./build/pip_cache
 
 ##  Installation Paths:
@@ -47,7 +50,14 @@ develop_deps:
 	@mkdir -p logs
 
 runserver:
-	export APP_CONFIG_ASSETS=`pwd`/assets/etc/config_develop.ini; aert-assets runserver 0.0.0.0:8002
+	export APP_CONFIG_ASSETS=$(CONF); aert-assets runserver 0.0.0.0:8002
+
+syncdb:
+	export APP_CONFIG_ASSETS=$(CONF); aert-assets syncdb --noinput
+	export APP_CONFIG_ASSETS=$(CONF); aert-assets loaddata $(FIXTURES)/initial_data_auth.yaml
+	export APP_CONFIG_ASSETS=$(CONF); aert-assets loaddata $(FIXTURES)/initial_data_students.yaml
+	export APP_CONFIG_ASSETS=$(CONF); aert-assets loaddata $(FIXTURES)/initial_data_earnings.yaml
+	export APP_CONFIG_ASSETS=$(CONF); aert-assets loaddata $(FIXTURES)/initial_data_spendings.yaml
 
 semantic_latest:
 	@mkdir -p build/

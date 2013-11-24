@@ -31,6 +31,7 @@ requires_base = [
     'django_select2==4.2.2',
     'django-import-export==0.1.4',
     'PyYAML==3.10',
+    'pytz==2013.8',
 ]
 
 requires_dev = [

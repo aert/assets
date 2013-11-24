@@ -32,6 +32,7 @@
 
 # This project
 /public/assets/
+/public/private/
 /RELEASE-VERSION
 /deploy/ansible/roles/app_assets/files/initial_data_*.yaml
 /deploy/ansible/roles/app_assets/files/setup_assets_*.tgz

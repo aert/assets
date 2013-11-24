@@ -4,8 +4,10 @@ LOG_DIR = {{ app_log }}
 ALLOWED_HOSTS_ = {{ app_servername }}
 STATIC_ROOT = {{ app_assets }}/
 STATIC_URL = /static/
-MEDIA_ROOT = {{ app_uploads }}
+MEDIA_ROOT = {{ app_uploads }}/uploads
 MEDIA_URL = http://127.0.0.1/media/
+PROTECTED_MEDIA_ROOT = {{ app_uploads }}/private
+PROTECTED_MEDIA_URL = /files/
 
 [database]
 DATABASE_ENGINE_ = django.db.backends.sqlite3

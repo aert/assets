@@ -7,7 +7,9 @@ server {
     access_log  {{ app_log }}/nginx_access.log;
     error_log   {{ app_log }}/nginx_error.log error;
 
-    root {{ app_public }};
+    root {{ app_assets }};
+
+    client_max_body_size 10M;
 
     # Common
     #include /etc/nginx/sites-available/_include_common.conf;
@@ -16,13 +18,12 @@ server {
     ## Static Files
     ## ###############
 
-    location ~*  \.(jpg|jpeg|png|gif|css|js|ico)$ {
+    location /static/ {
         access_log  off;
-        expires             33d;
+        alias {{ app_assets }}/;
+        expires 33d;
     }
     
-    try_files $uri @app;
-
     ## ###############
     ## APP - Assets
     ## ###############
