@@ -36,7 +36,7 @@ class Earning(models.Model):
                                      null=True, blank=True)
     from_other = models.CharField(_('from other'), max_length=250, blank=True)
 
-    has_invoice = models.BooleanField(_('has invoice ?'), default=False,
+    has_invoice = models.BooleanField(_('has invoice'), default=False,
                                       editable=False)
     added = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

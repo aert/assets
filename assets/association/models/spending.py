@@ -29,9 +29,7 @@ class Spending(models.Model):
     payment_type = models.PositiveSmallIntegerField(
         _('payment type'), choices=CHOICES_PAYMENT_TYPE)
 
-    to = models.CharField(_('to'), max_length=250, blank=True)
-
-    has_invoice = models.BooleanField(_('has invoice ?'), default=False,
+    has_invoice = models.BooleanField(_('has invoice'), default=False,
                                       editable=False)
     added = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

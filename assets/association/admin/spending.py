@@ -31,13 +31,13 @@ class SpendingAdmin(ExportMixin, ModelAdmin):
     inlines = [InvoiceInline]
     formats = EXPORT_FORMATS
     search_fields = (
-        'label', 'description', 'to',
+        'label', 'description',
     )
     list_display = (
         'payment_date', 'spending_type', 'label', 'amount', 'payment_type',
         'has_invoice',
     )
-    list_filter = ('payment_date', 'spending_type', 'to',
+    list_filter = ('payment_date', 'spending_type',
                    'has_invoice',)
     date_hierarchy = 'payment_date'
 

@@ -55,7 +55,7 @@ class EarningAdmin(ExportMixin, ModelAdmin):
     )
     list_display = (
         'payment_date', 'earning_type', 'label', 'amount', 'payment_type',
-        'is_internal', 'has_invoice',
+        'has_invoice',
     )
     list_filter = (
         'payment_date', 'earning_type', 'has_invoice',

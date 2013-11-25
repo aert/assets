@@ -76,7 +76,7 @@ class InvoiceAdmin(ExportMixin, ModelAdmin):
     )
     list_display = (
         'invoice_date', 'invoice_type', 'label', 'amount', 'payment_type',
-        'buyer', 'seller', 'get_document_link',
+        'seller', 'get_document_link',
     )
     list_filter = ('invoice_date', 'invoice_type', 'payment_type', 'seller')
     date_hierarchy = 'invoice_date'

@@ -52,6 +52,9 @@ develop_deps:
 runserver:
 	export APP_CONFIG_ASSETS=$(CONF); aert-assets runserver 0.0.0.0:8002
 
+validate:
+	export APP_CONFIG_ASSETS=$(CONF); cd assets; ./manage.py validate
+
 syncdb:
 	export APP_CONFIG_ASSETS=$(CONF); aert-assets syncdb --noinput
 	export APP_CONFIG_ASSETS=$(CONF); aert-assets loaddata $(FIXTURES)/initial_data_auth.yaml
