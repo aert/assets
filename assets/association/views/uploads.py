@@ -1,11 +1,11 @@
 import os
 import mimetypes
-
 from django import shortcuts
 from django import http
 from django.views.static import was_modified_since
 from django.utils.http import http_date
-from ..models import Invoice
+
+from ..models.invoice import Invoice
 
 
 def serve_upload(request, invoice_path):
@@ -22,7 +22,8 @@ def serve_upload(request, invoice_path):
     if not was_modified_since(request.META.get('HTTP_IF_MODIFIED_SINCE'),
                               statobj.st_mtime, statobj.st_size):
         return http.HttpResponseNotModified(mimetype=mimetype)
-    response = http.HttpResponse(open(fullpath, 'rb').read(), mimetype=mimetype)
+    response = http.HttpResponse(open(fullpath, 'rb').read(),
+                                 mimetype=mimetype)
     response["Last-Modified"] = http_date(statobj.st_mtime)
     response["Content-Length"] = statobj.st_size
     if encoding:

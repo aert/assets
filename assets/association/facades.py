@@ -1,6 +1,6 @@
 from django.utils.translation import ugettext_lazy as _
-from .models import Earning
-from .models import Spending
+from .models.earning import Earning
+from .models.spending import Spending
 
 
 MONTHS = {
