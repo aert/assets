@@ -353,7 +353,7 @@ msgstr "Mes actions"
 
 #: association/templates/admin/dashboard/welcome.html:18
 msgid "None available"
-msgstr "Aucun disponible"
+msgstr "Aucune disponible"
 
 #: association/templates/admin/dashboard/welcome.html:27
 msgid "added"
