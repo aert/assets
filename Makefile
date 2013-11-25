@@ -78,6 +78,9 @@ semantic_latest:
 
 vagrant: installer vagrant_up 
 
+vagrant_halt:
+	@cd $(VAGRANT_PATH); vagrant halt
+
 vagrant_up:
 	@cd $(VAGRANT_PATH); vagrant up
 
