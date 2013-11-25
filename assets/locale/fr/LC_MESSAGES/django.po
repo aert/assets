@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-24 20:43+0100\n"
+"POT-Creation-Date: 2013-11-25 19:18+0100\n"
 "PO-Revision-Date: 2013-11-15 16:05+01\n"
 "Last-Translator: AERT <dev.aert@gmail.com>\n"
 "Language-Team: French <dev.aert@gmail.com>\n"
@@ -30,9 +30,25 @@ msgstr "Inscription"
 msgid "from student"
 msgstr "élève"
 
-#: association/admin.py:223
+#: association/admin.py:205 association/models.py:159
+msgid "Earning"
+msgstr "Revenus"
+
+#: association/admin.py:210 association/models.py:160
+msgid "Spending"
+msgstr "Dépenses"
+
+#: association/admin.py:238
 msgid "Invoice"
 msgstr "Facture"
+
+#: association/admin.py:244
+msgid "Details"
+msgstr "Détails"
+
+#: association/admin.py:248
+msgid "Link"
+msgstr "Lien"
 
 #: association/facades.py:7
 msgid "January"
@@ -183,12 +199,12 @@ msgid "earning type"
 msgstr "type de revenu"
 
 #: association/models.py:77 association/models.py:122
-#: association/models.py:167
+#: association/models.py:166
 msgid "amount"
 msgstr "montant"
 
 #: association/models.py:78 association/models.py:123
-#: association/models.py:168
+#: association/models.py:167
 msgid "label"
 msgstr "libellé"
 
@@ -197,7 +213,7 @@ msgid "description"
 msgstr "description"
 
 #: association/models.py:81 association/models.py:126
-#: association/models.py:170
+#: association/models.py:169
 msgid "payment type"
 msgstr "type de paiement"
 
@@ -246,46 +262,46 @@ msgid "spendings"
 msgstr "dépenses"
 
 #: association/models.py:158
-msgid "Unknown"
-msgstr "Inconnu"
+msgid "Unrecorded"
+msgstr "Non comptabilisé"
 
-#: association/models.py:159
-msgid "Earning"
-msgstr "Revenus"
-
-#: association/models.py:160
-msgid "Spending"
-msgstr "Dépenses"
-
-#: association/models.py:165
+#: association/models.py:164
 msgid "invoice date"
 msgstr "date de facturation"
 
-#: association/models.py:174
+#: association/models.py:173
 msgid "type"
 msgstr "type"
 
-#: association/models.py:180
+#: association/models.py:177
 msgid "buyer"
 msgstr "acheteur"
 
-#: association/models.py:181
+#: association/models.py:178
 msgid "seller"
 msgstr "vendeur"
 
-#: association/models.py:191
+#: association/models.py:188 association/models.py:251
 msgid "document"
 msgstr "document"
 
-#: association/models.py:200
+#: association/models.py:197
 msgid "invoice"
 msgstr "facture"
 
-#: association/models.py:201
+#: association/models.py:198
 msgid "invoices"
 msgstr "factures"
 
+#: association/models.py:241
+msgid "Invoice must be either an Earning or a Spending."
+msgstr "La facture doit être soit une dépense, soit un revenu."
+
 #: association/models.py:246
+msgid "Download"
+msgstr "Télécharger"
+
+#: association/models.py:257
 msgid "document ?"
 msgstr "document ?"
 
@@ -364,6 +380,9 @@ msgstr "Factures"
 #: webui/settings/base.py:126
 msgid "Authorizations"
 msgstr "Permissions"
+
+#~ msgid "Unknown"
+#~ msgstr "Inconnu"
 
 #~ msgid "Association"
 #~ msgstr "Association"

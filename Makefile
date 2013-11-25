@@ -59,6 +59,12 @@ syncdb:
 	export APP_CONFIG_ASSETS=$(CONF); aert-assets loaddata $(FIXTURES)/initial_data_earnings.yaml
 	export APP_CONFIG_ASSETS=$(CONF); aert-assets loaddata $(FIXTURES)/initial_data_spendings.yaml
 
+messages:
+	export APP_CONFIG_ASSETS=$(CONF); cd assets; ./manage.py makemessages -a
+
+messages_compile:
+	export APP_CONFIG_ASSETS=$(CONF); cd assets; ./manage.py compilemessages
+
 semantic_latest:
 	@mkdir -p build/
 	@rm -rf build/semantic*

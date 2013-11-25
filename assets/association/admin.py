@@ -190,7 +190,28 @@ admin.site.register(Spending, SpendingAdmin)
 # Invoices
 ###############################################################################
 
+class EarningChoice(AutoModelSelect2Field):
+    queryset = Earning.objects
+    search_fields = ['label__icontains', 'description__icontains']
+
+
+class SpendingChoice(AutoModelSelect2Field):
+    queryset = Spending.objects
+    search_fields = ['label__icontains', 'description__icontains']
+
+
 class InvoiceForm(ModelForm):
+    earning = EarningChoice(
+        label=_('Earning'),
+        required=False,
+        widget=Select2Widget(select2_options={'width': '220px'})
+    )
+    spending = SpendingChoice(
+        label=_('Spending'),
+        required=False,
+        widget=Select2Widget(select2_options={'width': '220px'})
+    )
+
     class Meta:
         model = Invoice
         widgets = {
@@ -208,26 +229,29 @@ class InvoiceAdmin(ExportMixin, ModelAdmin):
     )
     list_display = (
         'invoice_date', 'invoice_type', 'label', 'amount', 'payment_type',
-        'buyer', 'seller', 'has_document',
+        'buyer', 'seller', 'get_document_link',
     )
     list_filter = ('invoice_date', 'invoice_type', 'payment_type', 'seller')
     date_hierarchy = 'invoice_date'
 
     fieldsets = [
-        (None, {
+        (_('Invoice'), {
             'fields': [
                 'invoice_date', 'payment_type',
                 'label', 'amount',
             ]
         }),
-        (_('Invoice'), {
+        (_('Details'), {
             'fields': [
                 ('buyer', 'seller'),
                 'document']}),
+        (_('Link'), {
+            'fields': [
+                ('earning', 'spending')]}),
     ]
 
-    def has_add_permission(self, request):
-        return False
+    #def has_add_permission(self, request):
+    #    return False
 
 
 admin.site.register(Invoice, InvoiceAdmin)
