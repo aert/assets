@@ -32,6 +32,7 @@ requires_base = [
     'django-import-export==0.1.4',
     'PyYAML==3.10',
     'pytz==2013.8',
+    'django-mockups==0.4.8',
 ]
 
 requires_dev = [
