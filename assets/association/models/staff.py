@@ -22,6 +22,7 @@ class Staff(models.Model):
 
     name = models.CharField(_('name'), max_length=100)
     surname = models.CharField(_('surname'), max_length=100)
+    title = models.CharField(_('title'), blank=True, max_length=100)
 
     availability = models.IntegerField(_('availability'),
                                        choices=CHOICES_AVAILABILITY,

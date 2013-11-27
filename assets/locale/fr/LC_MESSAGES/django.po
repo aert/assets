@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-25 23:51+0100\n"
+"POT-Creation-Date: 2013-11-27 17:53+0100\n"
 "PO-Revision-Date: 2013-11-15 16:05+01\n"
 "Last-Translator: AERT <dev.aert@gmail.com>\n"
 "Language-Team: French <dev.aert@gmail.com>\n"
@@ -153,7 +153,7 @@ msgid "label"
 msgstr "libellé"
 
 #: association/models/earning.py:31 association/models/spending.py:28
-#: association/models/staff.py:35
+#: association/models/staff.py:36
 msgid "description"
 msgstr "description"
 
@@ -266,40 +266,44 @@ msgstr "nom"
 msgid "surname"
 msgstr "prénom"
 
-#: association/models/staff.py:26
+#: association/models/staff.py:25
+msgid "title"
+msgstr "fonction"
+
+#: association/models/staff.py:27
 msgid "availability"
 msgstr "disponibilité"
 
-#: association/models/staff.py:29
+#: association/models/staff.py:30
 msgid "fees"
 msgstr "honoraires"
 
-#: association/models/staff.py:32 association/models/student.py:25
+#: association/models/staff.py:33 association/models/student.py:25
 msgid "address"
 msgstr "adresse"
 
-#: association/models/staff.py:33 association/models/student.py:28
+#: association/models/staff.py:34 association/models/student.py:28
 msgid "phone"
 msgstr "téléphone"
 
-#: association/models/staff.py:34 association/models/student.py:30
+#: association/models/staff.py:35 association/models/student.py:30
 msgid "e-mail"
 msgstr "e-mail"
 
-#: association/models/staff.py:37 association/models/student.py:32
+#: association/models/staff.py:38 association/models/student.py:32
 msgid "is active"
 msgstr "actif ?"
 
-#: association/models/staff.py:39
+#: association/models/staff.py:40
 msgid "registration"
 msgstr "Inscription"
 
-#: association/models/staff.py:48 association/models/staff.py:49
+#: association/models/staff.py:49 association/models/staff.py:50
 #: webui/settings/base.py:116
 msgid "Staff"
 msgstr "Personnel"
 
-#: association/models/staff.py:59
+#: association/models/staff.py:60
 msgid "fee ?"
 msgstr "honoraire ?"
 

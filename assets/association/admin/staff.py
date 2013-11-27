@@ -28,18 +28,18 @@ class StaffAdmin(ExportMixin, ModelAdmin):
     form = StaffForm
     formats = EXPORT_FORMATS
     search_fields = (
-        'name', 'surname', 'description', 'adress', 'email', 'phone',
+        'name', 'surname', 'title', 'description', 'adress', 'email', 'phone',
     )
     list_display = (
-        'name', 'surname', 'availability', 'fees', 'description',
-        'registration', 'is_active'
+        'name', 'surname', 'availability', 'fees', 'title',
+        'registration', 'is_active',
     )
     list_filter = ('availability',)
     date_hierarchy = 'registration'
 
     fieldsets = [
         (None, {
-            'fields': [('name', 'surname'), 'description']
+            'fields': [('name', 'surname'), 'title', 'description']
         }),
         (_('Contact'), {
             'fields': [('phone', 'email'), 'adress']}),
