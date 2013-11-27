@@ -47,6 +47,7 @@ else:
     ALLOWED_HOSTS = get_main('ALLOWED_HOSTS_').split() or ALLOWED_HOSTS
     LOG_DIR = get_main('LOG_DIR') or LOG_DIR
     LOGGING['handlers']['file']['filename'] = join(LOG_DIR, 'assets.log')
+    TRACKING_CODE = ""
     if not DEVELOP:
         STATIC_ROOT = config.get('main', 'STATIC_ROOT')
         STATIC_URL = config.get('main', 'STATIC_URL')
@@ -55,6 +56,11 @@ else:
 
         PROTECTED_MEDIA_ROOT = config.get("main", "PROTECTED_MEDIA_ROOT")
         PROTECTED_MEDIA_URL = config.get("main", "PROTECTED_MEDIA_URL")
+
+        if config.has_option("main", "TRACKING_CODE"):
+            TRACKING_CODE = config.get("main", "TRACKING_CODE")
+        else:
+            TRACKING_CODE = ""
 
     # [database]
     value = get_db('DATABASE_ENGINE_')

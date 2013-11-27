@@ -1,6 +1,9 @@
+import base64
 from django import template
 from django.utils import translation
 from django.utils.encoding import force_unicode
+from django.conf import settings
+
 import assets
 
 
@@ -30,3 +33,11 @@ def intchart(value):
 @register.simple_tag()
 def assets_version():
     return assets.VERSION
+
+
+@register.simple_tag()
+def tracking_code():
+    code = settings.TRACKING_CODE
+    if code:
+        return base64.decodestring(code)
+    return ""

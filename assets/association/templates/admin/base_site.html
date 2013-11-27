@@ -16,6 +16,7 @@
 
 {# Additional JS files in footer, right before </body> #}
 {% block extrajs %}
+  {% tracking_code %}
   <script type="text/javascript" src="{% static 'javascript/highcharts.js' %}"></script>
 {% endblock %}
 
