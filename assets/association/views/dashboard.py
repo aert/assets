@@ -2,11 +2,11 @@ import datetime
 from django.utils.translation import ugettext_lazy as _
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from ..facades import get_yearly_dashboard_data
+from ..facades.dashboard import get_yearly_dashboard_data
 #import logging
 
 
-def view_dashboard(request):
+def index(request):
     template_name = 'admin/dashboard/welcome.html'
     context = RequestContext(request)
 

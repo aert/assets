@@ -1,4 +1,7 @@
 from django.contrib.admin.sites import AdminSite
+from django.conf.urls import patterns, url
+
+from .views import dashboard
 
 
 class AdminMixin(object):
@@ -12,15 +15,11 @@ class AdminMixin(object):
            Add our dashboard view to the admin urlconf.
            Deleted the default index.
         """
-        from django.conf.urls import patterns, url
-        from .views.admin import view_dashboard
-
         urls = super(AdminMixin, self).get_urls()
         del urls[0]
         custom_url = patterns(
             '',
-            url(r'^$', self.admin_view(view_dashboard),
-                name="index")
+            url(r'^$', self.admin_view(dashboard.index), name="index")
         )
 
         return custom_url + urls
