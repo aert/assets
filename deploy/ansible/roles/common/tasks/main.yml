@@ -4,6 +4,7 @@
   apt: pkg={{ item }} state=installed update_cache=yes
   with_items:
     - vim
+    - make
     - python
   tags: common
 
