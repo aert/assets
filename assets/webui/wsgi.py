@@ -8,8 +8,12 @@ https://docs.djangoproject.com/en/1.6/howto/deployment/wsgi/
 """
 
 import os
+from raven.contrib.django.raven_compat.middleware.wsgi import Sentry
+from django.core.handlers.wsgi import WSGIHandler
+
 os.environ["DJANGO_SETTINGS_MODULE"] = "assets.webui.settings.main"
 
-from django.core.wsgi import get_wsgi_application
+application = Sentry(WSGIHandler())
 
-application = get_wsgi_application()
+#from django.core.wsgi import get_wsgi_application
+#application = get_wsgi_application()
