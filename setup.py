@@ -33,6 +33,7 @@ requires_base = [
     'PyYAML==3.10',
     'pytz==2013.8',
     'django-mockups==0.4.8',
+    'raven==3.5.2',
 ]
 
 requires_dev = [

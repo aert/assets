@@ -51,6 +51,7 @@ INSTALLED_APPS = (
     'django_select2',
     'import_export',
     'south',
+    'raven.contrib.django.raven_compat',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -162,4 +163,8 @@ LOGGING = {
             'level': 'DEBUG',
         },
     }
+}
+
+RAVEN_CONFIG = {
+    'dsn': 'http://bee293ed8eb74f8da19d7d0587cc1362:9e56ae1a409e4f3eb28d3b747e3aef6d@sentry.abdourakhmane.net/2',
 }

@@ -62,6 +62,9 @@ syncdb:
 	export APP_CONFIG_ASSETS=$(CONF); aert-assets loaddata $(FIXTURES)/initial_data_earnings.yaml
 	export APP_CONFIG_ASSETS=$(CONF); aert-assets loaddata $(FIXTURES)/initial_data_spendings.yaml
 
+raven_test:
+	export APP_CONFIG_ASSETS=$(CONF); aert-assets raven test
+
 messages:
 	export APP_CONFIG_ASSETS=$(CONF); cd assets; ./manage.py makemessages -a
 
