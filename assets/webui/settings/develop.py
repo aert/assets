@@ -2,6 +2,8 @@
 from .base import *
 
 
+STATSD_CLIENT = 'django_statsd.clients.null'
+
 #COMPRESS_ENABLED = True
 LOG_DIR = join(ROOT_DIR, 'logs')
 

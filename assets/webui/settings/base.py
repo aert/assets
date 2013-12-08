@@ -55,6 +55,9 @@ INSTALLED_APPS = (
 )
 
 MIDDLEWARE_CLASSES = (
+    'django_statsd.middleware.GraphiteRequestTimingMiddleware',
+    'django_statsd.middleware.GraphiteMiddleware',
+
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -169,3 +172,8 @@ LOGGING = {
 RAVEN_CONFIG = {
     'dsn': 'http://bee293ed8eb74f8da19d7d0587cc1362:9e56ae1a409e4f3eb28d3b747e3aef6d@sentry.abdourakhmane.net/2',
 }
+
+#STATSD_PATCHES = [
+#    'django_statsd.patches.db',
+#    'django_statsd.patches.cache',
+#]

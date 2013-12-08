@@ -5,6 +5,11 @@ from .base import *
 
 INSTALLED_APPS += ('gunicorn', )
 
+STATSD_CLIENT = 'django_statsd.clients.normal'
+STATSD_HOST = 'localhost'
+STATSD_PORT = 8125
+STATSD_PREFIX = 'assets.'
+
 ########## EMAIL CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#email-backend
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

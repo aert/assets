@@ -34,6 +34,7 @@ requires_base = [
     'pytz==2013.8',
     'django-mockups==0.4.8',
     'raven==3.5.2',
+    'django-statsd-mozilla==0.3.9',
 ]
 
 requires_dev = [
