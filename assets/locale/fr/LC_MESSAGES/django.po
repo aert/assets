@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-27 17:53+0100\n"
+"POT-Creation-Date: 2013-12-11 21:46+0100\n"
 "PO-Revision-Date: 2013-11-15 16:05+01\n"
 "Last-Translator: AERT <dev.aert@gmail.com>\n"
 "Language-Team: French <dev.aert@gmail.com>\n"
@@ -17,58 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-
-#: association/facades.py:7
-msgid "January"
-msgstr "Janvier"
-
-#: association/facades.py:8
-msgid "February"
-msgstr "Février"
-
-#: association/facades.py:9
-msgid "March"
-msgstr "Mars"
-
-#: association/facades.py:10
-msgid "April"
-msgstr "Avril"
-
-#: association/facades.py:11
-msgid "May"
-msgstr "Mai"
-
-#: association/facades.py:12
-msgid "June"
-msgstr "Juin"
-
-#: association/facades.py:13
-msgid "July"
-msgstr "Juillet"
-
-#: association/facades.py:14
-msgid "August"
-msgstr "Août"
-
-#: association/facades.py:15
-msgid "September"
-msgstr "Septembre"
-
-#: association/facades.py:16
-msgid "October"
-msgstr "Octobre"
-
-#: association/facades.py:17
-msgid "November"
-msgstr "Novembre"
-
-#: association/facades.py:18
-msgid "December"
-msgstr "Décembre"
-
-#: association/admin/earning.py:28 association/models/earning.py:35
-msgid "from student"
-msgstr "élève"
 
 #: association/admin/invoice.py:52 association/models/invoice.py:31
 msgid "Earning"
@@ -102,6 +50,54 @@ msgstr "Disponibilité"
 msgid "Registration"
 msgstr "Inscription"
 
+#: association/facades/dashboard.py:7
+msgid "January"
+msgstr "Janvier"
+
+#: association/facades/dashboard.py:8
+msgid "February"
+msgstr "Février"
+
+#: association/facades/dashboard.py:9
+msgid "March"
+msgstr "Mars"
+
+#: association/facades/dashboard.py:10
+msgid "April"
+msgstr "Avril"
+
+#: association/facades/dashboard.py:11
+msgid "May"
+msgstr "Mai"
+
+#: association/facades/dashboard.py:12
+msgid "June"
+msgstr "Juin"
+
+#: association/facades/dashboard.py:13
+msgid "July"
+msgstr "Juillet"
+
+#: association/facades/dashboard.py:14
+msgid "August"
+msgstr "Août"
+
+#: association/facades/dashboard.py:15
+msgid "September"
+msgstr "Septembre"
+
+#: association/facades/dashboard.py:16
+msgid "October"
+msgstr "Octobre"
+
+#: association/facades/dashboard.py:17
+msgid "November"
+msgstr "Novembre"
+
+#: association/facades/dashboard.py:18
+msgid "December"
+msgstr "Décembre"
+
 #: association/models/_common_.py:6
 msgid "Cash"
 msgstr "Espèces"
@@ -122,65 +118,56 @@ msgstr "Virement - Auto"
 msgid "Cheque"
 msgstr "Chèque"
 
-#: association/models/earning.py:20
-msgid "subscription (internal)"
-msgstr "cotisation (interne)"
-
-#: association/models/earning.py:21
-msgid "other (internal)"
-msgstr "autre (interne)"
-
-#: association/models/earning.py:22
-msgid "external"
-msgstr "externe"
-
-#: association/models/earning.py:26 association/models/spending.py:23
-msgid "payment date"
-msgstr "date de paiement"
-
-#: association/models/earning.py:28
-msgid "earning type"
-msgstr "type de revenu"
-
-#: association/models/earning.py:29 association/models/invoice.py:38
-#: association/models/spending.py:26
-msgid "amount"
-msgstr "montant"
-
-#: association/models/earning.py:30 association/models/invoice.py:39
-#: association/models/spending.py:27
+#: association/models/earning.py:18 association/models/earning.py:42
+#: association/models/invoice.py:39 association/models/spending.py:17
+#: association/models/spending.py:41
 msgid "label"
 msgstr "libellé"
 
-#: association/models/earning.py:31 association/models/spending.py:28
+#: association/models/earning.py:19
+msgid "internal"
+msgstr "interne"
+
+#: association/models/earning.py:23 association/models/earning.py:40
+#: association/models/invoice.py:45 association/models/spending.py:22
+#: association/models/spending.py:39
+msgid "type"
+msgstr "type"
+
+#: association/models/earning.py:24 association/models/spending.py:23
+msgid "types"
+msgstr "types"
+
+#: association/models/earning.py:38 association/models/spending.py:37
+msgid "payment date"
+msgstr "date de paiement"
+
+#: association/models/earning.py:41 association/models/invoice.py:38
+#: association/models/spending.py:40
+msgid "amount"
+msgstr "montant"
+
+#: association/models/earning.py:43 association/models/spending.py:42
 #: association/models/staff.py:36
 msgid "description"
 msgstr "description"
 
-#: association/models/earning.py:33 association/models/invoice.py:41
-#: association/models/spending.py:30
+#: association/models/earning.py:45 association/models/invoice.py:41
+#: association/models/spending.py:44
 msgid "payment type"
 msgstr "type de paiement"
 
-#: association/models/earning.py:37
-msgid "from other"
-msgstr "autre source"
-
-#: association/models/earning.py:39 association/models/spending.py:32
+#: association/models/earning.py:47 association/models/spending.py:46
 msgid "has invoice"
 msgstr "facture"
 
-#: association/models/earning.py:46
+#: association/models/earning.py:54
 msgid "earning"
 msgstr "revenu"
 
-#: association/models/earning.py:47
+#: association/models/earning.py:55
 msgid "earnings"
 msgstr "revenus"
-
-#: association/models/earning.py:57
-msgid "internal ?"
-msgstr "interne ?"
 
 #: association/models/invoice.py:30
 msgid "Unrecorded"
@@ -189,10 +176,6 @@ msgstr "Non comptabilisé"
 #: association/models/invoice.py:36
 msgid "invoice date"
 msgstr "date de facturation"
-
-#: association/models/invoice.py:45
-msgid "type"
-msgstr "type"
 
 #: association/models/invoice.py:49
 msgid "buyer"
@@ -227,22 +210,14 @@ msgid "document ?"
 msgstr "document ?"
 
 #: association/models/spending.py:18
-msgid "fixed expenses"
-msgstr "dépenses fixes"
+msgid "fixed charge"
+msgstr "charge fixe"
 
-#: association/models/spending.py:19
-msgid "other"
-msgstr "autres"
-
-#: association/models/spending.py:25
-msgid "spending type"
-msgstr "type de dépense"
-
-#: association/models/spending.py:39
+#: association/models/spending.py:53
 msgid "spending"
 msgstr "dépense"
 
-#: association/models/spending.py:40
+#: association/models/spending.py:54
 msgid "spendings"
 msgstr "dépenses"
 
@@ -299,7 +274,7 @@ msgid "registration"
 msgstr "Inscription"
 
 #: association/models/staff.py:49 association/models/staff.py:50
-#: webui/settings/base.py:116
+#: webui/settings/base.py:121
 msgid "Staff"
 msgstr "Personnel"
 
@@ -347,7 +322,7 @@ msgstr "élèves"
 msgid "email"
 msgstr "e-mail"
 
-#: association/templates/admin/base_site.html:41
+#: association/templates/admin/base_site.html:42
 msgid "Language"
 msgstr "Langue"
 
@@ -389,13 +364,13 @@ msgstr "Répartition annuelle"
 
 #: association/templates/admin/dashboard/includes/_welcome_dashboard.html:39
 #: association/templates/admin/dashboard/includes/_welcome_dashboard.html:51
-#: webui/settings/base.py:122
+#: webui/settings/base.py:127
 msgid "Earnings"
 msgstr "Revenus"
 
 #: association/templates/admin/dashboard/includes/_welcome_dashboard.html:44
 #: association/templates/admin/dashboard/includes/_welcome_dashboard.html:55
-#: webui/settings/base.py:124
+#: webui/settings/base.py:129
 msgid "Spendings"
 msgstr "Dépenses"
 
@@ -407,24 +382,18 @@ msgstr "Montant total"
 msgid "Home"
 msgstr "Accueil"
 
-#: association/views/admin.py:18
+#: association/views/dashboard.py:18
 msgid "Dashboard"
 msgstr "Tableau de bord"
 
-#: webui/settings/base.py:114
+#: webui/settings/base.py:119
 msgid "Students"
 msgstr "Élèves"
 
-#: webui/settings/base.py:119
+#: webui/settings/base.py:124
 msgid "Invoices"
 msgstr "Factures"
 
-#: webui/settings/base.py:128
+#: webui/settings/base.py:133
 msgid "Authorizations"
 msgstr "Permissions"
-
-#~ msgid "to"
-#~ msgstr "pour"
-
-#~ msgid "Association"
-#~ msgstr "Association"
