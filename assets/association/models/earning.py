@@ -7,7 +7,6 @@ from django.utils.encoding import smart_text
 
 from ._common_ import CHOICES_PAYMENT_TYPE
 from ._common_ import APP_LABEL
-from .student import Student
 
 
 ###############################################################################
@@ -31,10 +30,6 @@ class Earning(models.Model):
     description = models.TextField(_('description'), blank=True)
     payment_type = models.PositiveSmallIntegerField(
         _('payment type'), choices=CHOICES_PAYMENT_TYPE)
-
-    from_student = models.ForeignKey(Student, verbose_name=_('from student'),
-                                     null=True, blank=True)
-    from_other = models.CharField(_('from other'), max_length=250, blank=True)
 
     has_invoice = models.BooleanField(_('has invoice'), default=False,
                                       editable=False)
