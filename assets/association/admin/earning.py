@@ -1,7 +1,9 @@
 from django.contrib import admin
 from django.contrib.admin import ModelAdmin
+from django.core.urlresolvers import reverse
 from django.forms import ModelForm
 from django.forms import TextInput
+from django.utils.translation import ugettext_lazy as _
 from suit.widgets import SuitDateWidget
 from suit.widgets import AutosizedTextarea
 from import_export.admin import ExportMixin
@@ -52,7 +54,7 @@ class EarningAdmin(ExportMixin, ModelAdmin):
     )
     list_display = (
         'payment_date', 'earning_type', 'label', 'amount', 'payment_type',
-        'has_invoice',
+        'invoices_link',
     )
     list_filter = (
         'payment_date', 'earning_type', 'has_invoice',
@@ -69,6 +71,17 @@ class EarningAdmin(ExportMixin, ModelAdmin):
             ]
         }),
     ]
+
+    def invoices_link(self, obj):
+        if not obj.has_invoice:
+            return ""
+        url = reverse('admin:association_invoice_changelist')
+        querystring = 'q=&earning__id__exact={}'.format(obj.pk)
+        return u"<a href='{}?{}'>{}</a>".format(
+            url, querystring, _('Display'))
+    invoices_link.admin_order_field = 'has_invoice'
+    invoices_link.allow_tags = True
+    invoices_link.short_description = _('invoice')
 
 
 admin.site.register(EarningType, EarningTypeAdmin)

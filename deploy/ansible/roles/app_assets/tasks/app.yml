@@ -55,6 +55,7 @@
     - "initial_data_students.yaml"
     - "initial_data_earnings.yaml"
     - "initial_data_spendings.yaml"
+    - "initial_data_invoices.yaml"
 
 - name: app-conf_fixtures_install
   shell: cd {{ app_home }} && make all

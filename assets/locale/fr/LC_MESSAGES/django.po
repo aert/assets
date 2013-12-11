@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-11 21:46+0100\n"
+"POT-Creation-Date: 2013-12-11 23:16+0100\n"
 "PO-Revision-Date: 2013-11-15 16:05+01\n"
 "Last-Translator: AERT <dev.aert@gmail.com>\n"
 "Language-Team: French <dev.aert@gmail.com>\n"
@@ -17,6 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: association/admin/earning.py:81 association/admin/spending.py:78
+msgid "Display"
+msgstr "Afficher"
+
+#: association/admin/earning.py:84 association/admin/spending.py:81
+#: association/models/invoice.py:69
+msgid "invoice"
+msgstr "facture"
 
 #: association/admin/invoice.py:52 association/models/invoice.py:31
 msgid "Earning"
@@ -188,10 +197,6 @@ msgstr "vendeur"
 #: association/models/invoice.py:60 association/models/invoice.py:124
 msgid "document"
 msgstr "document"
-
-#: association/models/invoice.py:69
-msgid "invoice"
-msgstr "facture"
 
 #: association/models/invoice.py:70
 msgid "invoices"

@@ -61,6 +61,7 @@ syncdb:
 	export APP_CONFIG_ASSETS=$(CONF); aert-assets loaddata $(FIXTURES)/initial_data_students.yaml
 	export APP_CONFIG_ASSETS=$(CONF); aert-assets loaddata $(FIXTURES)/initial_data_earnings.yaml
 	export APP_CONFIG_ASSETS=$(CONF); aert-assets loaddata $(FIXTURES)/initial_data_spendings.yaml
+	export APP_CONFIG_ASSETS=$(CONF); aert-assets loaddata $(FIXTURES)/initial_data_invoices.yaml
 
 raven_test:
 	export APP_CONFIG_ASSETS=$(CONF); aert-assets raven test
