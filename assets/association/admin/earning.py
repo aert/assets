@@ -7,9 +7,26 @@ from suit.widgets import AutosizedTextarea
 from import_export.admin import ExportMixin
 
 from ..models import Earning
+from ..models import EarningType
 
 from ._common_ import EXPORT_FORMATS
 from .invoice import InvoiceInline
+
+
+###############################################################################
+# Earning Types
+###############################################################################
+
+class EarningTypeAdmin(ModelAdmin):
+    search_fields = (
+        'label',
+    )
+    list_display = ('label', 'is_internal',)
+    list_filter = ('is_internal',)
+
+    fieldsets = [
+        (None, {'fields': ['label', 'is_internal']}),
+    ]
 
 
 ###############################################################################
@@ -54,4 +71,5 @@ class EarningAdmin(ExportMixin, ModelAdmin):
     ]
 
 
+admin.site.register(EarningType, EarningTypeAdmin)
 admin.site.register(Earning, EarningAdmin)

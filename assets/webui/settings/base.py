@@ -124,7 +124,7 @@ SUIT_CONFIG = {
         {'label': _('Invoices'),  'url': 'association.invoice',
             'icon': 'icon-shopping-cart'},
         '-',
-        {'label': _('Earnings'),  'url': 'association.earning',
+        {'label': _('Earnings'), 'models': ('association.earning', 'association.earningtype'),
             'icon': 'icon-plus-sign'},
         {'label': _('Spendings'), 'url': 'association.spending',
             'icon': 'icon-minus-sign'},

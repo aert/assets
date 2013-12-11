@@ -10,21 +10,34 @@ from ._common_ import APP_LABEL
 
 
 ###############################################################################
+# EARNING TYPE
+###############################################################################
+
+@python_2_unicode_compatible
+class EarningType(models.Model):
+    label = models.CharField(_('label'), max_length=50, unique=True)
+    is_internal = models.BooleanField(_('internal'), default=False)
+
+    class Meta:
+        ordering = ['is_internal', 'label']
+        verbose_name = _('type')
+        verbose_name_plural = _('types')
+        app_label = APP_LABEL
+
+    def __str__(self):
+        return smart_text(self.label)
+
+
+###############################################################################
 # EARNING
 ###############################################################################
 
 @python_2_unicode_compatible
 class Earning(models.Model):
-    CHOICES_EARNING_TYPE = (
-        (1, _('subscription (internal)')),
-        (2, _('other (internal)')),
-        (10, _('external')),
-    )
-
     payment_date = models.DateField(
         _('payment date'), default=datetime.datetime.now)
-    earning_type = models.PositiveSmallIntegerField(
-        _('earning type'), choices=CHOICES_EARNING_TYPE)
+    earning_type = models.ForeignKey(
+        EarningType, verbose_name=('type'))
     amount = models.DecimalField(_('amount'), max_digits=15, decimal_places=2)
     label = models.CharField(_('label'), max_length=250)
     description = models.TextField(_('description'), blank=True)
@@ -44,9 +57,3 @@ class Earning(models.Model):
 
     def __str__(self):
         return smart_text('{}: {}'.format(self.payment_date, self.label))
-
-    def is_internal(self):
-        return self.earning_type != 10
-    is_internal.admin_order_field = 'earning_type'
-    is_internal.boolean = True
-    is_internal.short_description = _('internal ?')
