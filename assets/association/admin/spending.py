@@ -7,9 +7,26 @@ from suit.widgets import AutosizedTextarea
 from import_export.admin import ExportMixin
 
 from ..models import Spending
+from ..models import SpendingType
 
 from ._common_ import EXPORT_FORMATS
 from .invoice import InvoiceInline
+
+
+###############################################################################
+# Earning Types
+###############################################################################
+
+class SpendingTypeAdmin(ModelAdmin):
+    search_fields = (
+        'label',
+    )
+    list_display = ('label', 'is_recurrent',)
+    list_filter = ('is_recurrent',)
+
+    fieldsets = [
+        (None, {'fields': ['label', 'is_recurrent']}),
+    ]
 
 
 ###############################################################################
@@ -37,8 +54,7 @@ class SpendingAdmin(ExportMixin, ModelAdmin):
         'payment_date', 'spending_type', 'label', 'amount', 'payment_type',
         'has_invoice',
     )
-    list_filter = ('payment_date', 'spending_type',
-                   'has_invoice',)
+    list_filter = ('payment_date', 'spending_type', 'has_invoice',)
     date_hierarchy = 'payment_date'
 
     fieldsets = [
@@ -52,4 +68,5 @@ class SpendingAdmin(ExportMixin, ModelAdmin):
     ]
 
 
+admin.site.register(SpendingType, SpendingTypeAdmin)
 admin.site.register(Spending, SpendingAdmin)

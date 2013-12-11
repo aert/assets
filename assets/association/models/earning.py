@@ -37,7 +37,7 @@ class Earning(models.Model):
     payment_date = models.DateField(
         _('payment date'), default=datetime.datetime.now)
     earning_type = models.ForeignKey(
-        EarningType, verbose_name=('type'))
+        EarningType, verbose_name=_('type'))
     amount = models.DecimalField(_('amount'), max_digits=15, decimal_places=2)
     label = models.CharField(_('label'), max_length=250)
     description = models.TextField(_('description'), blank=True)
