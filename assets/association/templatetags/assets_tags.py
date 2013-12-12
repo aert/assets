@@ -24,6 +24,8 @@ def next_lang():
 def intchart(value):
     orig = force_unicode(value)
     new = orig.replace(",", ".")
+    if new == "0":
+        return "null"
     if orig == new:
         return new
     else:

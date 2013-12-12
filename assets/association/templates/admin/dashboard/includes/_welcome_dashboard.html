@@ -9,42 +9,78 @@ $(function () {
     // #########################################################################
     $('#dash_chart').highcharts({
         chart: {
-            //type: 'bar'
+            type: 'column'
         },
         title: {
             text: '{% trans "DashBoard" %}'
         },
         xAxis: {
             categories: [
-                {% for res in results %} '{{ res.month_name }}', {% endfor %}
+                {% for m in month_names %} '{{ m }}', {% endfor %}
             ]
         },
         yAxis: {
             title: {
                 text: '{% trans "Amount" %}'
-            }
+            },
+
+        stackLabels: {
+                            enabled: true,
+                            style: {
+                                fontWeight: 'bold',
+                                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                                
+                            },
+                            formatter: function() {
+                            return '<b>'+ Math.round(this.total*Math.pow(10,2))/Math.pow(10,2)+' €</b>'
+                            },
+                            
+                            y: -10
+                        
+                        
+                        },
         },
+{% comment %}
             labels: {
                 items: [{
                     html: '{% trans "Global Yearly Breakdown" %}',
                     style: {
-                        left: '40px',
+                        left: '5px',
                         top: '8px',
                         color: 'black'
                     }
                 }]
             },
-        series: [{
+{% endcomment %}
+                    
+        plotOptions: {
+            column: {
+                stacking: 'normal'
+            }
+        },
+
+        series: [
+{% for key, values in results_earnings.items %}
+        {
             type: 'column',
-            name: '{% trans "Earnings" %}',
-            data: [ {% for res in results %} {{ res.amount_earning|intchart }}, {% endfor %} ],
-            color: '#69CD4B'
-        }, {
+            name: '{{ key }}',
+            stack: '{% trans "Earnings" %}',
+            data: [ {% for res in values %} {{ res.amount_earning|intchart }}, {% endfor %} ],
+            color: colors_earning[ {{ forloop.counter }} ]
+            //color: '#69CD4B'
+        },
+{% endfor %}
+{% for key, values in results_spendings.items %}
+        {
             type: 'column',
-            name: '{% trans "Spendings" %}',
-            data: [ {% for res in results %} {{ res.amount_spending|intchart }}, {% endfor %} ],
-            color: '#FF6F34'
-        }, {
+            name: '{{ key }}',
+            stack: '{% trans "Spendings" %}',
+            data: [ {% for res in values %} {{ res.amount_spending|intchart }}, {% endfor %} ],
+            color: colors_spending[ {{ forloop.counter }} ]
+            //color: '#FF6F34'
+        },
+{% endfor %}
+        {
                 type: 'pie',
                 name: '{% trans "Total Amount" %}',
                 data: [{
@@ -56,15 +92,16 @@ $(function () {
                     y: {{ total_spending|intchart }},
                     color: '#FF6F34'
                 }],
-                center: [100, 60],
-                size: 100,
+                center: [20, 10],
+                size: 50,
                 showInLegend: false,
                 dataLabels: {
                     enabled: false
                 }
-            }
+        }
         ]
     });
+
 });
 </script>
 

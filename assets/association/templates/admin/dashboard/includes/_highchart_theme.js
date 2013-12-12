@@ -4,8 +4,11 @@
  * @author Torstein Hønsi
  */
 
+colors_earning = ['#003300', '#006600', '#009900', '#00CC00', '#00FF00'].reverse().concat(['#333300', '#336600', '#339900', '#33CC00'].reverse())
+colors_spending = ['#FF0000', '#FF3300', '#FF6600', '#FF9900', '#FFCC00'].reverse().concat(['#FFFF00', '#FF0033', '#FF3333', '#FF6633'].reverse())
+
 Highcharts.theme = {
-   colors: ['#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4'],
+   //colors: ['#003300', '#006600', '#009900', '#00CC00', '#00FF00', '#333300', '#336600', '#339900', '#33CC00'],
    chart: {
       backgroundColor: {
          linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
