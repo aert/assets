@@ -1,116 +1,27 @@
 {% load i18n %}
 {% load assets_tags %}
 
+
 <script>
 $(function () { 
 
     {% include "admin/dashboard/includes/_highchart_theme.js" %}
 
-    // #########################################################################
-    $('#dash_chart').highcharts({
-        chart: {
-            type: 'column'
-        },
-        title: {
-            text: '{% trans "DashBoard" %}'
-        },
-        xAxis: {
-            categories: [
-                {% for m in month_names %} '{{ m }}', {% endfor %}
-            ]
-        },
-        yAxis: {
-            title: {
-                text: '{% trans "Amount" %}'
-            },
-
-        stackLabels: {
-                            enabled: true,
-                            style: {
-                                fontWeight: 'bold',
-                                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
-                                
-                            },
-                            formatter: function() {
-                            return '<b>'+ Math.round(this.total*Math.pow(10,2))/Math.pow(10,2)+' €</b>'
-                            },
-                            
-                            y: -10
-                        
-                        
-                        },
-        },
-{% comment %}
-            labels: {
-                items: [{
-                    html: '{% trans "Global Yearly Breakdown" %}',
-                    style: {
-                        left: '5px',
-                        top: '8px',
-                        color: 'black'
-                    }
-                }]
-            },
-{% endcomment %}
-                    
-        plotOptions: {
-            column: {
-                stacking: 'normal'
-            }
-        },
-
-        series: [
-{% for key, values in results_earnings.items %}
-        {
-            type: 'column',
-            name: '{{ key }}',
-            stack: '{% trans "Earnings" %}',
-            data: [ {% for res in values %} {{ res.amount_earning|intchart }}, {% endfor %} ],
-            color: colors_earning[ {{ forloop.counter }} ]
-            //color: '#69CD4B'
-        },
-{% endfor %}
-{% for key, values in results_spendings.items %}
-        {
-            type: 'column',
-            name: '{{ key }}',
-            stack: '{% trans "Spendings" %}',
-            data: [ {% for res in values %} {{ res.amount_spending|intchart }}, {% endfor %} ],
-            color: colors_spending[ {{ forloop.counter }} ]
-            //color: '#FF6F34'
-        },
-{% endfor %}
-        {
-                type: 'pie',
-                name: '{% trans "Total Amount" %}',
-                data: [{
-                    name: '{% trans "Earnings" %}',
-                    y: {{ total_earning|intchart }},
-                    color: '#69CD4B'
-                }, {
-                    name: '{% trans "Spendings" %}',
-                    y: {{ total_spending|intchart }},
-                    color: '#FF6F34'
-                }],
-                center: [20, 10],
-                size: 50,
-                showInLegend: false,
-                dataLabels: {
-                    enabled: false
-                }
-        }
-        ]
-    });
+    // Charts
+    {% include "admin/dashboard/includes/_welcome_dashboard_main.js" %}
+    {% include "admin/dashboard/includes/_welcome_dashboard_pies.js" %}
 
 });
 </script>
 
 
 <div class="results">
-    <div id="dash_chart" style="width:100%; height:400px;"></div>
+    <div id="dash_main" style="width:100%; height:400px;"></div>
 
-    {#{% for res in results %}#}
-    {#<p> {{ res.month_name }} - {{ res.amount_earning }} - {{ res.amount_spending }}</p>#}
-    {#{% endfor %}#}
+    <br/>
+    <div id="dash_pie_earnings" style="width:49.9%; height:400px; float:left;"></div>
+    <div id="dash_pie_spendings" style="width:49.9%; height:400px; float:right;"></div>
+
+    <div style="clear:both;"></div>
 </div>
 <br/><br/>

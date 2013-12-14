@@ -32,6 +32,16 @@ def intchart(value):
         return intchart(new)
 
 
+@register.filter('amount')
+def amount(value):
+    orig = force_unicode(value)
+    new = orig.replace(",", ".")
+    if orig == new:
+        return new
+    else:
+        return intchart(new)
+
+
 @register.simple_tag()
 def assets_version():
     return assets.VERSION
