@@ -1,0 +1,384 @@
+- fields:
+    label: "Fixe"
+    is_recurrent: true
+  model: association.spendingtype
+  pk: 1
+- fields:
+    label: "Autre (non fixe)"
+    is_recurrent: false
+  model: association.spendingtype
+  pk: 2
+- fields:
+    label: "Construction"
+    is_recurrent: false
+  model: association.spendingtype
+  pk: 3
+- fields:
+    label: "Fournitures"
+    is_recurrent: false
+  model: association.spendingtype
+  pk: 4
+###############################################################################
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '39.81'
+    description: '' 
+    label: "Prima Sahara"
+    payment_date: 2013-02-24
+    payment_type: 1
+    spending_type: 1
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 1
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '5'
+    description: '' 
+    label: "Ciment"
+    payment_date: 2013-02-27
+    payment_type: 1
+    spending_type: 3
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 2
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '653.78'
+    description: '' 
+    label: "Tables"
+    payment_date: 2013-02-28
+    payment_type: 1
+    spending_type: 3
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 3
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '325'
+    description: '' 
+    label: "Loyer"
+    payment_date: 2013-02-28
+    payment_type: 1
+    spending_type: 1
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 4
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '3.6'
+    description: '' 
+    label: "Foret carrelage"
+    payment_date: 2013-03-01
+    payment_type: 1
+    spending_type: 3
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 5
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '144.2'
+    description: '' 
+    label: "Evier"
+    payment_date: 2013-03-01
+    payment_type: 1
+    spending_type: 3
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 6
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '4.2'
+    description: '' 
+    label: "Chevilles"
+    payment_date: 2013-03-06
+    payment_type: 1
+    spending_type: 3
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 7
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '20.98'
+    description: '' 
+    label: "Colle"
+    payment_date: 2013-03-06
+    payment_type: 1
+    spending_type: 3
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 8
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '28.4'
+    description: '' 
+    label: "Forets béton"
+    payment_date: 2013-03-08
+    payment_type: 1
+    spending_type: 3
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 9
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '21.96'
+    description: '' 
+    label: "Alimentation"
+    payment_date: 2013-03-10
+    payment_type: 1
+    spending_type: 3
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 10
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '3.9'
+    description: '' 
+    label: "Protèges-docs"
+    payment_date: 2013-03-13
+    payment_type: 1
+    spending_type: 4
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 11
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '5.1'
+    description: '' 
+    label: "Manchon WC"
+    payment_date: 2013-03-14
+    payment_type: 1
+    spending_type: 3
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 12
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '650'
+    description: '' 
+    label: "Loyer"
+    payment_date: 2013-03-31
+    payment_type: 1
+    spending_type: 1
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 13
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '675.76'
+    description: '' 
+    label: "Charges (trimestrielles)"
+    payment_date: 2013-03-31
+    payment_type: 1
+    spending_type: 1
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 14
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '107.63'
+    description: '' 
+    label: "Table d’affichage"
+    payment_date: 2013-04-05
+    payment_type: 1
+    spending_type: 4
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 15
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '112.3'
+    description: '' 
+    label: "Voyage Reims"
+    payment_date: 2013-04-06
+    payment_type: 1
+    spending_type: 2
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 16
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '0.4'
+    description: '' 
+    label: "Photocopies"
+    payment_date: 2013-04-11
+    payment_type: 1
+    spending_type: 4
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 17
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '1.58'
+    description: '' 
+    label: "Aimants"
+    payment_date: 2013-04-11
+    payment_type: 1
+    spending_type: 4
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 18
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '63.88'
+    description: '' 
+    label: "Electricité ES"
+    payment_date: 2013-04-13
+    payment_type: 1
+    spending_type: 1
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 19
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '47.42'
+    description: '' 
+    label: "Electricité ES"
+    payment_date: 2013-04-16
+    payment_type: 1
+    spending_type: 1
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 20
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '25'
+    description: '' 
+    label: "Amplificateur"
+    payment_date: 2013-04-18
+    payment_type: 1
+    spending_type: 4
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 21
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '8.4'
+    description: '' 
+    label: "Cordon"
+    payment_date: 2013-04-18
+    payment_type: 1
+    spending_type: 4
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 22
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '172'
+    description: '' 
+    label: "Micro"
+    payment_date: 2013-04-18
+    payment_type: 1
+    spending_type: 4
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 23
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '300'
+    description: '' 
+    label: "Gérant"
+    payment_date: 2013-04-19
+    payment_type: 1
+    spending_type: 1
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 24
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '23.97'
+    description: '' 
+    label: "Applique murale"
+    payment_date: 2013-04-29
+    payment_type: 1
+    spending_type: 3
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 25
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '650'
+    description: '' 
+    label: "Loyer"
+    payment_date: 2013-04-30
+    payment_type: 1
+    spending_type: 1
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 26
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '65'
+    description: '' 
+    label: "Voyage Luxembourg + Behrens"
+    payment_date: 2013-05-04
+    payment_type: 1
+    spending_type: 2
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 27
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '350'
+    description: '' 
+    label: "Gérant"
+    payment_date: 2013-05-04
+    payment_type: 1
+    spending_type: 1
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 28
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '32.14'
+    description: '' 
+    label: "Voyage Saint Louis"
+    payment_date: 2013-05-11
+    payment_type: 1
+    spending_type: 2
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 29
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '50.92'
+    description: '' 
+    label: "Voyage Illzach + Cernay"
+    payment_date: 2013-05-18
+    payment_type: 1
+    spending_type: 2
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 30
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '5'
+    description: '' 
+    label: "Ampoules"
+    payment_date: 2013-05-18
+    payment_type: 1
+    spending_type: 3
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 31
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '14'
+    description: '' 
+    label: "Miroir + balai"
+    payment_date: 2013-05-29
+    payment_type: 1
+    spending_type: 3
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 32
+- fields: 
+    added: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+    amount: '650'
+    description: '' 
+    label: "Loyer"
+    payment_date: 2013-05-30
+    payment_type: 1
+    spending_type: 1
+    updated: !!timestamp '2013-11-18 05:30:00.000000+00:00'
+  model: association.spending
+  pk: 33

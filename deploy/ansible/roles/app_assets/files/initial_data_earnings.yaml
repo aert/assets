@@ -1,0 +1,219 @@
+- fields:
+    label: "Cotisation"
+    is_internal: true
+  model: association.earningtype
+  pk: 1
+- fields:
+    label: "Autre (interne)"
+    is_internal: true
+  model: association.earningtype
+  pk: 2
+- fields:
+    label: "Externe"
+    is_internal: false
+  model: association.earningtype
+  pk: 3
+- fields:
+    label: "Boite de dons"
+    is_internal: true
+  model: association.earningtype
+  pk: 4
+###############################################################################
+- fields:
+    added: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+    amount: '218.3'
+    description: ''
+    earning_type: 3
+    label: "Collecte caserne Soultz Naundorf"
+    payment_date: 2013-02-28
+    payment_type: 1
+    updated: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+  model: association.earning
+  pk: 1
+- fields:
+    added: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+    amount: '2080'
+    description: ''
+    earning_type: 2
+    label: "Don pour les travaux"
+    payment_date: 2013-02-28
+    payment_type: 1
+    updated: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+  model: association.earning
+  pk: 2
+- fields:
+    added: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+    amount: '133'
+    description: ''
+    earning_type: 3
+    label: "Collecte dans la caserne de la gare"
+    payment_date: 2013-03-07
+    payment_type: 1
+    updated: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+  model: association.earning
+  pk: 3
+- fields:
+    added: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+    amount: '70'
+    description: ''
+    earning_type: 3
+    label: "Boite de dons"
+    payment_date: 2013-03-29
+    payment_type: 4
+    updated: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+  model: association.earning
+  pk: 4
+- fields:
+    added: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+    amount: '245'
+    description: ''
+    earning_type: 1
+    label: "Cotisation"
+    payment_date: 2013-03-30
+    payment_type: 1
+    updated: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+  model: association.earning
+  pk: 5
+- fields:
+    added: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+    amount: '620'
+    description: ''
+    earning_type: 3
+    label: "Collecte Reims"
+    payment_date: 2013-04-06
+    payment_type: 1
+    updated: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+  model: association.earning
+  pk: 6
+- fields:
+    added: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+    amount: '1077'
+    description: ''
+    earning_type: 3
+    label: "Collecte Obernai"
+    payment_date: 2013-04-13
+    payment_type: 1
+    updated: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+  model: association.earning
+  pk: 7
+- fields:
+    added: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+    amount: '89'
+    description: ''
+    earning_type: 3
+    label: "Collecte Neudorf"
+    payment_date: 2013-04-13
+    payment_type: 1
+    updated: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+  model: association.earning
+  pk: 8
+- fields:
+    added: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+    amount: '190'
+    description: ''
+    earning_type: 4
+    label: "Boite de don de la caserne"
+    payment_date: 2013-04-18
+    payment_type: 1
+    updated: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+  model: association.earning
+  pk: 9
+- fields:
+    added: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+    amount: '166'
+    description: ''
+    earning_type: 3
+    label: "Collecte port du Rhin"
+    payment_date: 2013-04-20
+    payment_type: 1
+    updated: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+  model: association.earning
+  pk: 10
+- fields:
+    added: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+    amount: '300'
+    description: ''
+    earning_type: 1
+    label: "Cotisation"
+    payment_date: 2013-04-29
+    payment_type: 1
+    updated: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+  model: association.earning
+  pk: 11
+- fields:
+    added: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+    amount: '1358'
+    description: ''
+    earning_type: 3
+    label: "Collecte Luxembourg + Behrens"
+    payment_date: 2013-05-04
+    payment_type: 1
+    updated: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+  model: association.earning
+  pk: 12
+- fields:
+    added: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+    amount: '175'
+    description: ''
+    earning_type: 3
+    label: "Collecte Port du Rhin"
+    payment_date: 2013-05-11
+    payment_type: 1
+    updated: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+  model: association.earning
+  pk: 13
+- fields:
+    added: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+    amount: '455'
+    description: ''
+    earning_type: 3
+    label: "Collecte Saint Louis"
+    payment_date: 2013-05-11
+    payment_type: 1
+    updated: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+  model: association.earning
+  pk: 14
+- fields:
+    added: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+    amount: '430'
+    description: ''
+    earning_type: 3
+    label: "Collecte Illzach Cernay"
+    payment_date: 2013-05-18
+    payment_type: 1
+    updated: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+  model: association.earning
+  pk: 15
+- fields:
+    added: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+    amount: '255'
+    description: ''
+    earning_type: 3
+    label: "Collecte Bischwiller"
+    payment_date: 2013-05-18
+    payment_type: 1
+    updated: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+  model: association.earning
+  pk: 16
+- fields:
+    added: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+    amount: '170'
+    description: ''
+    earning_type: 4
+    label: "Boite de don de la caserne"
+    payment_date: 2013-05-29
+    payment_type: 1
+    updated: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+  model: association.earning
+  pk: 17
+- fields:
+    added: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+    amount: '130'
+    description: ''
+    earning_type: 1
+    label: "Cotisation"
+    payment_date: 2013-05-29
+    payment_type: 1
+    updated: !!timestamp '2013-11-18 04:30:00.000000+00:00'
+  model: association.earning
+  pk: 18

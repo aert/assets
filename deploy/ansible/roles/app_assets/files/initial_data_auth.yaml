@@ -1,0 +1,114 @@
+- fields: {codename: add_logentry, content_type: 1, name: Can add log entry}
+  model: auth.permission
+  pk: 1
+- fields: {codename: change_logentry, content_type: 1, name: Can change log entry}
+  model: auth.permission
+  pk: 2
+- fields: {codename: delete_logentry, content_type: 1, name: Can delete log entry}
+  model: auth.permission
+  pk: 3
+- fields: {codename: add_permission, content_type: 2, name: Can add permission}
+  model: auth.permission
+  pk: 4
+- fields: {codename: change_permission, content_type: 2, name: Can change permission}
+  model: auth.permission
+  pk: 5
+- fields: {codename: delete_permission, content_type: 2, name: Can delete permission}
+  model: auth.permission
+  pk: 6
+- fields: {codename: add_group, content_type: 3, name: Can add group}
+  model: auth.permission
+  pk: 7
+- fields: {codename: change_group, content_type: 3, name: Can change group}
+  model: auth.permission
+  pk: 8
+- fields: {codename: delete_group, content_type: 3, name: Can delete group}
+  model: auth.permission
+  pk: 9
+- fields: {codename: add_user, content_type: 4, name: Can add user}
+  model: auth.permission
+  pk: 10
+- fields: {codename: change_user, content_type: 4, name: Can change user}
+  model: auth.permission
+  pk: 11
+- fields: {codename: delete_user, content_type: 4, name: Can delete user}
+  model: auth.permission
+  pk: 12
+- fields: {codename: add_contenttype, content_type: 5, name: Can add content type}
+  model: auth.permission
+  pk: 13
+- fields: {codename: change_contenttype, content_type: 5, name: Can change content type}
+  model: auth.permission
+  pk: 14
+- fields: {codename: delete_contenttype, content_type: 5, name: Can delete content type}
+  model: auth.permission
+  pk: 15
+- fields: {codename: add_session, content_type: 6, name: Can add session}
+  model: auth.permission
+  pk: 16
+- fields: {codename: change_session, content_type: 6, name: Can change session}
+  model: auth.permission
+  pk: 17
+- fields: {codename: delete_session, content_type: 6, name: Can delete session}
+  model: auth.permission
+  pk: 18
+- fields: {codename: add_migrationhistory, content_type: 7, name: Can add migration history}
+  model: auth.permission
+  pk: 19
+- fields: {codename: change_migrationhistory, content_type: 7, name: Can change migration history}
+  model: auth.permission
+  pk: 20
+- fields: {codename: delete_migrationhistory, content_type: 7, name: Can delete migration history}
+  model: auth.permission
+  pk: 21
+- fields: {codename: add_student, content_type: 8, name: Can add student}
+  model: auth.permission
+  pk: 22
+- fields: {codename: change_student, content_type: 8, name: Can change student}
+  model: auth.permission
+  pk: 23
+- fields: {codename: delete_student, content_type: 8, name: Can delete student}
+  model: auth.permission
+  pk: 24
+- fields: {codename: add_earning, content_type: 10, name: Can add earning}
+  model: auth.permission
+  pk: 28
+- fields: {codename: change_earning, content_type: 10, name: Can change earning}
+  model: auth.permission
+  pk: 29
+- fields: {codename: delete_earning, content_type: 10, name: Can delete earning}
+  model: auth.permission
+  pk: 30
+- fields: {codename: add_spending, content_type: 11, name: Can add spending}
+  model: auth.permission
+  pk: 31
+- fields: {codename: change_spending, content_type: 11, name: Can change spending}
+  model: auth.permission
+  pk: 32
+- fields: {codename: delete_spending, content_type: 11, name: Can delete spending}
+  model: auth.permission
+  pk: 33
+- fields: {codename: add_keymap, content_type: 12, name: Can add key map}
+  model: auth.permission
+  pk: 34
+- fields: {codename: change_keymap, content_type: 12, name: Can change key map}
+  model: auth.permission
+  pk: 35
+- fields: {codename: delete_keymap, content_type: 12, name: Can delete key map}
+  model: auth.permission
+  pk: 36
+- fields:
+    date_joined: 2013-11-17 01:42:11.977154+00:00
+    email: ''
+    first_name: ''
+    groups: []
+    is_active: true
+    is_staff: true
+    is_superuser: true
+    last_login: 2013-11-23 13:12:33.712493+00:00
+    last_name: ''
+    password: pbkdf2_sha256$12000$kSMobQKDz2SW$CcLHJDmiFN5PGB7DSlbE8lbK0C2Ww388rcertDx3YZY=
+    user_permissions: []
+    username: admin
+  model: auth.user
+  pk: 1

@@ -1,0 +1,60 @@
+- fields: 
+    amount: '10'
+    buyer: ''
+    document: ''
+    earning: null
+    invoice_date: !!timestamp '2013-05-29 20:07:55+00:00'
+    invoice_type: 2
+    label: Miroir
+    payment_type: 1
+    seller: ''
+    spending: 32
+    updated: !!timestamp '2013-12-11 21:08:44.161045+00:00'
+    added: !!timestamp '2013-12-11 21:08:44.161022+00:00'
+  model: association.invoice
+  pk: 1
+- fields: 
+    amount: '4'
+    buyer: ''
+    document: ''
+    earning: null
+    invoice_date: !!timestamp '2013-05-29 20:07:55+00:00'
+    invoice_type: 2
+    label: Balai
+    payment_type: 1
+    seller: ''
+    spending: 32
+    added: !!timestamp '2013-12-11 21:08:44.171039+00:00'
+    updated: !!timestamp '2013-12-11 21:08:44.171061+00:00'
+  model: association.invoice
+  pk: 2
+- fields: 
+    amount: '144.2'
+    buyer: ''
+    document: ''
+    earning: null
+    invoice_date: !!timestamp '2013-03-01 21:53:24+00:00'
+    invoice_type: 2
+    label: Evier
+    payment_type: 1
+    seller: ''
+    spending: 6
+    added: !!timestamp '2013-12-11 21:53:37.293606+00:00'
+    updated: !!timestamp '2013-12-11 21:53:37.293655+00:00'
+  model: association.invoice
+  pk: 3
+- fields: 
+    amount: '1358'
+    buyer: ''
+    document: ''
+    earning: 12
+    invoice_date: !!timestamp '2013-05-04 20:56:32+00:00'
+    invoice_type: 1
+    label: Collecte Luxembourg + Behrens
+    payment_type: 1
+    seller: ''
+    spending: null
+    added: !!timestamp '2013-12-11 21:56:54.550735+00:00'
+    updated: !!timestamp '2013-12-11 21:56:54.550761+00:00'
+  model: association.invoice
+  pk: 4
