@@ -22,3 +22,8 @@ Invoices
 ********
 
 .. image:: docs/images/assets_invoices.png
+
+Students
+********
+
+.. image:: docs/images/assets_students.png
