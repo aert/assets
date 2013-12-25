@@ -21,7 +21,7 @@ def gen_data_files(*dirs):
 
 
 requires_base = [
-    'Django==1.6',
+    'Django==1.6.1',
     #'django-braces==1.2.2',
     #'django-model-utils==1.5.0',
     'South==0.8.4',
@@ -29,7 +29,7 @@ requires_base = [
     'django-lineage==0.2.0',
     'django-suit==0.2.5',
     'django_select2==4.2.2',
-    'django-import-export==0.1.4',
+    'django-import-export==0.1.5',
     'PyYAML==3.10',
     'pytz==2013.8',
     'django-mockups==0.4.8',
