@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-11 23:16+0100\n"
+"POT-Creation-Date: 2013-12-25 19:01+0100\n"
 "PO-Revision-Date: 2013-11-15 16:05+01\n"
 "Last-Translator: AERT <dev.aert@gmail.com>\n"
 "Language-Team: French <dev.aert@gmail.com>\n"
@@ -47,6 +47,38 @@ msgstr "Détails"
 msgid "Link"
 msgstr "Lien"
 
+#: association/admin/log_entry.py:9
+msgid "Addition"
+msgstr "Ajouté"
+
+#: association/admin/log_entry.py:10
+msgid "Change"
+msgstr "Modifié"
+
+#: association/admin/log_entry.py:11
+msgid "Deletion"
+msgstr "Supprimé"
+
+#: association/admin/log_entry.py:23
+msgid "action"
+msgstr "action"
+
+#: association/admin/log_entry.py:32
+msgid "user"
+msgstr "utilisateur"
+
+#: association/admin/log_entry.py:45
+msgid "admin"
+msgstr "admin"
+
+#: association/admin/log_entry.py:53
+msgid "staff"
+msgstr "Personnel"
+
+#: association/admin/log_entry.py:116
+msgid "Action"
+msgstr "Actions"
+
 #: association/admin/staff.py:44 association/admin/student.py:43
 msgid "Contact"
 msgstr "Contact"
@@ -59,51 +91,51 @@ msgstr "Disponibilité"
 msgid "Registration"
 msgstr "Inscription"
 
-#: association/facades/dashboard.py:7
+#: association/facades/dashboard.py:9
 msgid "January"
 msgstr "Janvier"
 
-#: association/facades/dashboard.py:8
+#: association/facades/dashboard.py:10
 msgid "February"
 msgstr "Février"
 
-#: association/facades/dashboard.py:9
+#: association/facades/dashboard.py:11
 msgid "March"
 msgstr "Mars"
 
-#: association/facades/dashboard.py:10
+#: association/facades/dashboard.py:12
 msgid "April"
 msgstr "Avril"
 
-#: association/facades/dashboard.py:11
+#: association/facades/dashboard.py:13
 msgid "May"
 msgstr "Mai"
 
-#: association/facades/dashboard.py:12
+#: association/facades/dashboard.py:14
 msgid "June"
 msgstr "Juin"
 
-#: association/facades/dashboard.py:13
+#: association/facades/dashboard.py:15
 msgid "July"
 msgstr "Juillet"
 
-#: association/facades/dashboard.py:14
+#: association/facades/dashboard.py:16
 msgid "August"
 msgstr "Août"
 
-#: association/facades/dashboard.py:15
+#: association/facades/dashboard.py:17
 msgid "September"
 msgstr "Septembre"
 
-#: association/facades/dashboard.py:16
+#: association/facades/dashboard.py:18
 msgid "October"
 msgstr "Octobre"
 
-#: association/facades/dashboard.py:17
+#: association/facades/dashboard.py:19
 msgid "November"
 msgstr "Novembre"
 
-#: association/facades/dashboard.py:18
+#: association/facades/dashboard.py:20
 msgid "December"
 msgstr "Décembre"
 
@@ -327,7 +359,7 @@ msgstr "élèves"
 msgid "email"
 msgstr "e-mail"
 
-#: association/templates/admin/base_site.html:42
+#: association/templates/admin/base_site.html:44
 msgid "Language"
 msgstr "Langue"
 
@@ -355,39 +387,11 @@ msgstr "supprimé"
 msgid "Unknown content"
 msgstr "Contenu inconnu"
 
-#: association/templates/admin/dashboard/includes/_welcome_dashboard.html:15
-msgid "DashBoard"
-msgstr "Tableau de bord"
-
-#: association/templates/admin/dashboard/includes/_welcome_dashboard.html:24
-msgid "Amount"
-msgstr "Montant"
-
-#: association/templates/admin/dashboard/includes/_welcome_dashboard.html:29
-msgid "Global Yearly Breakdown"
-msgstr "Répartition annuelle"
-
-#: association/templates/admin/dashboard/includes/_welcome_dashboard.html:39
-#: association/templates/admin/dashboard/includes/_welcome_dashboard.html:51
-#: webui/settings/base.py:127
-msgid "Earnings"
-msgstr "Revenus"
-
-#: association/templates/admin/dashboard/includes/_welcome_dashboard.html:44
-#: association/templates/admin/dashboard/includes/_welcome_dashboard.html:55
-#: webui/settings/base.py:129
-msgid "Spendings"
-msgstr "Dépenses"
-
-#: association/templates/admin/dashboard/includes/_welcome_dashboard.html:49
-msgid "Total Amount"
-msgstr "Montant total"
-
 #: association/templates/suit/menu.html:10
 msgid "Home"
 msgstr "Accueil"
 
-#: association/views/dashboard.py:18
+#: association/views/dashboard.py:46
 msgid "Dashboard"
 msgstr "Tableau de bord"
 
@@ -399,6 +403,30 @@ msgstr "Élèves"
 msgid "Invoices"
 msgstr "Factures"
 
+#: webui/settings/base.py:127
+msgid "Earnings"
+msgstr "Revenus"
+
+#: webui/settings/base.py:129
+msgid "Spendings"
+msgstr "Dépenses"
+
 #: webui/settings/base.py:133
 msgid "Authorizations"
 msgstr "Permissions"
+
+#: webui/settings/base.py:134
+msgid "History"
+msgstr "Historique"
+
+#~ msgid "DashBoard"
+#~ msgstr "Tableau de bord"
+
+#~ msgid "Amount"
+#~ msgstr "Montant"
+
+#~ msgid "Global Yearly Breakdown"
+#~ msgstr "Répartition annuelle"
+
+#~ msgid "Total Amount"
+#~ msgstr "Montant total"

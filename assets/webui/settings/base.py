@@ -131,6 +131,8 @@ SUIT_CONFIG = {
         '-',
         # Reorder app models
         {'app': 'auth', 'label': _('Authorizations'), 'icon': 'icon-lock'},
+        {'label': _('History'), 'url': 'admin.logentry',
+            'icon': 'icon-time'},
 
     ),
 }

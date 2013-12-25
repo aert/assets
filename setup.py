@@ -39,7 +39,7 @@ requires_base = [
 
 requires_dev = [
     'bpython==0.12',
-    'django-debug-toolbar==0.11.0',
+    'django-debug-toolbar==1.0',
     # Build tools
     'pip==1.4.1',
     'wheel==0.22.0',
