@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-25 19:01+0100\n"
+"POT-Creation-Date: 2013-12-25 19:50+0100\n"
 "PO-Revision-Date: 2013-11-15 16:05+01\n"
 "Last-Translator: AERT <dev.aert@gmail.com>\n"
 "Language-Team: French <dev.aert@gmail.com>\n"
@@ -359,7 +359,7 @@ msgstr "élèves"
 msgid "email"
 msgstr "e-mail"
 
-#: association/templates/admin/base_site.html:44
+#: association/templates/admin/base_site.html:46
 msgid "Language"
 msgstr "Langue"
 
@@ -419,14 +419,14 @@ msgstr "Permissions"
 msgid "History"
 msgstr "Historique"
 
-#~ msgid "DashBoard"
-#~ msgstr "Tableau de bord"
+msgid "DashBoard"
+msgstr "Tableau de bord"
 
-#~ msgid "Amount"
-#~ msgstr "Montant"
+msgid "Amount"
+msgstr "Montant"
 
-#~ msgid "Global Yearly Breakdown"
-#~ msgstr "Répartition annuelle"
+msgid "Global Yearly Breakdown"
+msgstr "Répartition annuelle"
 
-#~ msgid "Total Amount"
-#~ msgstr "Montant total"
+msgid "Total Amount"
+msgstr "Montant total"
