@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-25 19:50+0100\n"
+"POT-Creation-Date: 2014-01-04 18:35+0100\n"
 "PO-Revision-Date: 2013-11-15 16:05+01\n"
 "Last-Translator: AERT <dev.aert@gmail.com>\n"
 "Language-Team: French <dev.aert@gmail.com>\n"
@@ -19,6 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: association/admin/earning.py:81 association/admin/spending.py:78
+#: association/templates/admin/dashboard/includes/_welcome_dashboard.html:37
 msgid "Display"
 msgstr "Afficher"
 
@@ -91,51 +92,51 @@ msgstr "Disponibilité"
 msgid "Registration"
 msgstr "Inscription"
 
-#: association/facades/dashboard.py:9
+#: association/facades/dashboard.py:10
 msgid "January"
 msgstr "Janvier"
 
-#: association/facades/dashboard.py:10
+#: association/facades/dashboard.py:11
 msgid "February"
 msgstr "Février"
 
-#: association/facades/dashboard.py:11
+#: association/facades/dashboard.py:12
 msgid "March"
 msgstr "Mars"
 
-#: association/facades/dashboard.py:12
+#: association/facades/dashboard.py:13
 msgid "April"
 msgstr "Avril"
 
-#: association/facades/dashboard.py:13
+#: association/facades/dashboard.py:14
 msgid "May"
 msgstr "Mai"
 
-#: association/facades/dashboard.py:14
+#: association/facades/dashboard.py:15
 msgid "June"
 msgstr "Juin"
 
-#: association/facades/dashboard.py:15
+#: association/facades/dashboard.py:16
 msgid "July"
 msgstr "Juillet"
 
-#: association/facades/dashboard.py:16
+#: association/facades/dashboard.py:17
 msgid "August"
 msgstr "Août"
 
-#: association/facades/dashboard.py:17
+#: association/facades/dashboard.py:18
 msgid "September"
 msgstr "Septembre"
 
-#: association/facades/dashboard.py:18
+#: association/facades/dashboard.py:19
 msgid "October"
 msgstr "Octobre"
 
-#: association/facades/dashboard.py:19
+#: association/facades/dashboard.py:20
 msgid "November"
 msgstr "Novembre"
 
-#: association/facades/dashboard.py:20
+#: association/facades/dashboard.py:21
 msgid "December"
 msgstr "Décembre"
 
@@ -387,11 +388,16 @@ msgstr "supprimé"
 msgid "Unknown content"
 msgstr "Contenu inconnu"
 
+#: association/templates/admin/dashboard/includes/_welcome_dashboard.html:28
+#: association/templates/admin/dashboard/includes/_welcome_dashboard.html:31
+msgid "Year"
+msgstr "Année"
+
 #: association/templates/suit/menu.html:10
 msgid "Home"
 msgstr "Accueil"
 
-#: association/views/dashboard.py:46
+#: association/views/dashboard.py:60
 msgid "Dashboard"
 msgstr "Tableau de bord"
 

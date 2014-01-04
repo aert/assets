@@ -14,6 +14,35 @@ $(function () {
 });
 </script>
 
+{# --- Filters ------------------------------------------------------------- #}
+<div class="toolbar-content clearfix">  
+              <div class="object-tools"></div>
+
+  <div id="toolbar" class="clearfix">
+    <form id="changelist-search" action="" method="get" class="form-inline">
+      <div class="search-container">
+        
+        
+        <span class="search-filters">
+            <select data-name="year" class="auto-width search-filter" style="max-width: 200px">
+              <option value="">{% trans "Year" %}</option>
+              <option value="">---</option>
+              {% for year in years %}
+              <option data-name="year" value="{{ year }}" {% if year == year_sel %} selected {% endif %} >{% trans "Year" %} {{ year }}</option>
+              {% endfor %}
+            </select>
+
+        </span>
+
+        <input type="submit" value="{% trans "Display" %}" class="btn btn-info">
+        &nbsp;
+        
+      </div>
+    </form>
+  </div>
+</div>
+
+{# --- Results ------------------------------------------------------------- #}
 
 <div class="results">
     <div id="dash_main" style="width:100%; height:400px;"></div>

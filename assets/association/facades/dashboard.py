@@ -1,3 +1,4 @@
+import datetime
 from django.utils.translation import ugettext_lazy as _
 from ..models.earning import Earning
 from ..models.earning import EarningType
@@ -61,13 +62,13 @@ def get_yearly_dashboard_data(year):
             type_results.append(res)
         results_spendings[s_type.label] = type_results
 
-
     # Earnings
     amount_list = Earning.objects.filter(payment_date__year=year)
     if amount_list:
         for res in amount_list:
             month_num = res.payment_date.month
-            results_earnings[res.earning_type.label][month_num - 1].amount_earning += res.amount
+            m_earn = results_earnings[res.earning_type.label][month_num - 1]
+            m_earn.amount_earning += res.amount
             total_earning += res.amount
 
     # Spendings
@@ -75,19 +76,19 @@ def get_yearly_dashboard_data(year):
     if amount_list:
         for res in amount_list:
             month_num = res.payment_date.month
-            results_spendings[res.spending_type.label][month_num - 1].amount_spending += res.amount
+            m_spend = results_spendings[res.spending_type.label][month_num - 1]
+            m_spend.amount_spending += res.amount
             total_spending += res.amount
 
-    # Trim starting and ending results
-    #trim_start = 0
-    #while trim_start < 12 and results[trim_start].amount_earning == 0 \
-    #        and results[trim_start].amount_spending == 0:
-    #    trim_start += 1
-    #trim_end = 11
-    #while trim_end > 0 and results[trim_end].amount_earning == 0 \
-    #        and results[trim_end].amount_spending == 0:
-    #    trim_end -= 1
-    #if trim_start != 12:
-    #    results = results[trim_start:trim_end + 1]
-
     return (results_earnings, results_spendings, total_earning, total_spending)
+
+
+def get_years(since_year=2013):
+    """ Return the list of selectable years for the Dashboard. """
+    current_year = datetime.datetime.now().year
+    results = []
+
+    for year in range(since_year, current_year + 1):
+        results.append(year)
+
+    return results

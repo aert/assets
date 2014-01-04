@@ -4,6 +4,7 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from ..facades.dashboard import MONTHS
 from ..facades.dashboard import get_yearly_dashboard_data
+from ..facades.dashboard import get_years
 #import logging
 
 
@@ -11,12 +12,23 @@ def index(request):
     template_name = 'admin/dashboard/welcome.html'
     context = RequestContext(request)
 
-    # Get results
-    year = datetime.datetime.now().year
+    # --- Search Criterias ----------------------------------------------------
+    year = ""
+    if 'year' in request.GET:
+        year = request.GET['year']
+        if year.isdigit():
+            year = int(year)
+        else:
+            year = ""
+
+    if not year:
+        year = datetime.datetime.now().year
+
+    # --- Get Results ---------------------------------------------------------
     results_earnings, results_spendings, total_earning, total_spending, = \
         get_yearly_dashboard_data(year)
 
-    # Hide 0 values
+    # --- Hide 0 values -------------------------------------------------------
     ignored_month = []
     for m in range(0, 12):
         ignored = True
@@ -36,19 +48,24 @@ def index(request):
         for m in ignored_month:
             del month_name[m]
             for etype, month_values in results_earnings.items():
-                filtered_earnings[etype] = [m_val for m_val in month_values if m_val.month_num != m]
+                filtered_earnings[etype] = \
+                    [m_val for m_val in month_values if m_val.month_num != m]
             for stype, month_values in results_spendings.items():
-                filtered_spendings[stype] = [m_val for m_val in month_values if m_val.month_num != m]
+                filtered_spendings[stype] = \
+                    [m_val for m_val in month_values if m_val.month_num != m]
         results_earnings = filtered_earnings
         results_spendings = filtered_spendings
 
-    # Send to Template
+    # --- Send to Template ----------------------------------------------------
     context['title'] = _('Dashboard')
     context['results_earnings'] = results_earnings
     context['results_spendings'] = results_spendings
     context['total_earning'] = total_earning
     context['total_spending'] = total_spending
     context['month_names'] = month_name.values()
+
+    context['years'] = get_years()
+    context['year_sel'] = year
 
     return render_to_response(
         template_name, context_instance=context)
