@@ -31,7 +31,7 @@ requires_base = [
     'django_select2==4.2.2',
     'django-import-export==0.1.5',
     'PyYAML==3.10',
-    #'pytz==2013.9',
+    'pytz==2013.9',
     'django-mockups==0.4.8',
     'raven==4.0.2',
     'django-statsd-mozilla==0.3.10',
