@@ -14,8 +14,9 @@ install_deps:
 install_env:
 	mkdir -p $(NEW_VENV_PATH)
 	virtualenv -p python2.7 --no-site-packages $(NEW_VENV_PATH)
-	$(NEW_VENV_PATH)/bin/pip install --upgrade pip
-	$(NEW_VENV_PATH)/bin/pip install -I "setuptools>=0.8" "wheel>=0.22"
+	$(NEW_VENV_PATH)/bin/pip install -I "setuptools==2.0.2"
+	$(NEW_VENV_PATH)/bin/pip install -I "wheel>=0.22"
+	$(NEW_VENV_PATH)/bin/pip install --upgrade pip==1.5
 
 install_wheel:
 	$(NEW_VENV_PATH)/bin/pip install --use-wheel --no-index --find-links=wheel-dir/ -r requirements.txt

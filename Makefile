@@ -123,7 +123,7 @@ installer_clean:
 	@rm -rf build/setup_*
 
 wheel:
-	@pip wheel --wheel-dir=build/wheel/wheel-dir . --download-cache $(PIP_CACHE)
+	@pip wheel --wheel-dir=build/wheel/wheel-dir . --download-cache $(PIP_CACHE) --no-use-wheel
 	@mv build/wheel/wheel-dir build/installer/wheel-dir
 	@rm -rf build/wheel/
 

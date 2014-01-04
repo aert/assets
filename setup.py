@@ -31,23 +31,22 @@ requires_base = [
     'django_select2==4.2.2',
     'django-import-export==0.1.5',
     'PyYAML==3.10',
-    'pytz==2013.8',
+    #'pytz==2013.9',
     'django-mockups==0.4.8',
-    'raven==3.5.2',
-    'django-statsd-mozilla==0.3.9',
+    'raven==4.0.2',
+    'django-statsd-mozilla==0.3.10',
 ]
 
 requires_dev = [
     'bpython==0.12',
     'django-debug-toolbar==1.0',
     # Build tools
-    'pip==1.4.1',
+    'pip==1.5',
     'wheel==0.22.0',
     'pip-tools==0.3.4',
     'flake8==2.1.0',
     # Deploy tools
-    'ansible==1.4',
-    'Fabric==1.8.0',
+    'ansible==1.4.3',
 ]
 
 extras_requires = {
