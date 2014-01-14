@@ -1,3 +1,4 @@
+from ._i18n import *
 from .staff import *
 from .student import *
 from .earning import *

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-04 18:35+0100\n"
+"POT-Creation-Date: 2014-01-14 14:11+0100\n"
 "PO-Revision-Date: 2013-11-15 16:05+01\n"
 "Last-Translator: AERT <dev.aert@gmail.com>\n"
 "Language-Team: French <dev.aert@gmail.com>\n"
@@ -17,6 +17,38 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: association/admin/_i18n.py:5
+msgid "keyword"
+msgstr "mot-clef"
+
+#: association/admin/_i18n.py:6 association/admin/log_entry.py:32
+msgid "user"
+msgstr "utilisateur"
+
+#: association/admin/_i18n.py:7
+msgid "content type"
+msgstr "Type de contenu"
+
+#: association/admin/_i18n.py:8
+msgid "object"
+msgstr "Objet"
+
+#: association/admin/_i18n.py:11
+msgid "DashBoard"
+msgstr "Tableau de bord"
+
+#: association/admin/_i18n.py:12
+msgid "Amount"
+msgstr "Montant"
+
+#: association/admin/_i18n.py:13
+msgid "Global Yearly Breakdown"
+msgstr "Répartition annuelle"
+
+#: association/admin/_i18n.py:14
+msgid "Total Amount"
+msgstr "Montant total"
 
 #: association/admin/earning.py:81 association/admin/spending.py:78
 #: association/templates/admin/dashboard/includes/_welcome_dashboard.html:37
@@ -63,10 +95,6 @@ msgstr "Supprimé"
 #: association/admin/log_entry.py:23
 msgid "action"
 msgstr "action"
-
-#: association/admin/log_entry.py:32
-msgid "user"
-msgstr "utilisateur"
 
 #: association/admin/log_entry.py:45
 msgid "admin"
@@ -370,7 +398,7 @@ msgstr "Mes actions"
 
 #: association/templates/admin/dashboard/welcome.html:18
 msgid "None available"
-msgstr "Aucune disponible"
+msgstr "Aucun disponible"
 
 #: association/templates/admin/dashboard/welcome.html:27
 msgid "added"
@@ -424,15 +452,3 @@ msgstr "Permissions"
 #: webui/settings/base.py:134
 msgid "History"
 msgstr "Historique"
-
-msgid "DashBoard"
-msgstr "Tableau de bord"
-
-msgid "Amount"
-msgstr "Montant"
-
-msgid "Global Yearly Breakdown"
-msgstr "Répartition annuelle"
-
-msgid "Total Amount"
-msgstr "Montant total"
