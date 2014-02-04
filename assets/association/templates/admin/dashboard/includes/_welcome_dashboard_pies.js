@@ -35,7 +35,7 @@ $('#dash_pie_earnings').highcharts({
 		showLastLabel: true,
     },
     tooltip: {
-        shared: true,
+        shared: false,
         valueSuffix: ' €'
     },
     plotOptions: {
@@ -94,7 +94,7 @@ $('#dash_pie_spendings').highcharts({
 		showLastLabel: true,
     },
     tooltip: {
-        shared: true,
+        shared: false,
         valueSuffix: ' €'
     },
     plotOptions: {

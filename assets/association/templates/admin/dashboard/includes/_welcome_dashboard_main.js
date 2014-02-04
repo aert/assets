@@ -58,7 +58,7 @@
 {% endcomment %}
 
     tooltip: {
-        shared: true,
+        shared: false,
         valueSuffix: ' €'
     },
                     
