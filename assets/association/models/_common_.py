@@ -6,6 +6,6 @@ CHOICES_PAYMENT_TYPE = (
     (1, _('Cash')),
     (2, _('Credit Card')),
     (3, _('Bank Transfer')),
-    (3, _('Bank Transfer - Auto')),
-    (4, _('Cheque')),
+    (4, _('Bank Transfer - Auto')),
+    (5, _('Cheque')),
 )
