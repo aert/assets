@@ -3,6 +3,7 @@ assets
 
 Resources management for associations.
 
+
 Dashboard
 *********
 
